@@ -67,12 +67,17 @@ h2 {
 
 .productName {
 	background-color: $mainColorSite;
-	color: $whiteColor;
-	display: flex;
-	justify-content: space-between;
-    flex-wrap: wrap;
+    color: $whiteColor;
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
 
     &__info {
+        float: left;
+
         .title {
             margin-bottom: 37px;
         }
@@ -107,6 +112,7 @@ h2 {
     }
 
     &__image {
+        float: right;
         padding-top: 6px;
 
         img {
@@ -118,11 +124,14 @@ h2 {
 
 
 .aboutProduct {
-	display: flex;
-	justify-content: space-between;
-    flex-wrap: wrap;
+	&::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
 
     &__info {
+        float: left;
         max-width: 57%;
 
         .text>p {
@@ -135,6 +144,7 @@ h2 {
     }
 
     &__image {
+        float: right;
         padding-top: 7px;
 
         img {
@@ -598,7 +608,11 @@ h2 {
 	}
 
 	.scrinSection__img {
-		text-align: center;
+        text-align: center;
+
+        img {
+            max-width: 200px;
+        }
 	}
 
 	.reviewsSection {
