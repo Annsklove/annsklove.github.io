@@ -1,0 +1,644 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('../font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background-color: $whiteColor;
+    @include mainFont ();
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: $mainWidthSite;
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.page-padding {
+	padding: 42px 50px 48px;
+}
+
+h2 {
+    @include mainFont ($size: 30px, $lineHt: 35px, $color: $mainColorSite);
+}
+
+.title {
+	margin-bottom: 26px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.btnMain {
+	text-align: center;
+    text-transform: uppercase;
+    @include mainFont ($size: 18px, $lineHt: 40px, $color: $mainColorSite, $fWeight: 600);
+	background-color: $whiteColor;
+	text-decoration: none;
+	border-radius: 4px;
+	width: 140px;
+	height: 40px;
+	display: block;
+	transition-duration: .3s;
+	border: none;
+}
+
+.btnMain:hover {
+	background-color: $bgColorSite;
+}
+
+.btnMain:focus {
+	background-color: $whiteColor;
+}
+
+.productName {
+	background-color: $mainColorSite;
+	color: $whiteColor;
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__info {
+        .title {
+            margin-bottom: 37px;
+        }
+
+        h1 {
+            @include mainFont ($size: 60px, $lineHt:62px, $color: $whiteColor);
+            text-shadow: 1px 1px 0px #0000004c;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul>li {
+            @include mainFont ($size: 20px, $lineHt: 24px, $color: $whiteColor);
+            text-shadow: 1px 1px 0px #0000004c;
+            margin-bottom: 12px;
+            padding-left: 4px;
+        }
+
+        ul>li:last-child {
+            margin-bottom: 0;
+        }
+
+        ul>li::before {
+            content: "";
+            background: url(../image/icons/check.png) no-repeat;
+            display: inline-block;
+            width: 25px;
+            height: 19px;
+        }
+    }
+
+    &__image {
+        padding-top: 6px;
+
+        img {
+            max-width: 469px;
+            max-height: 214px;
+        }
+    }
+}
+
+
+.aboutProduct {
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__info {
+        max-width: 57%;
+
+        .text>p {
+            margin-bottom: 9px;
+        }
+
+        .text>p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__image {
+        padding-top: 7px;
+
+        img {
+            max-width: 430px;
+            max-height: 245px;
+        }
+    }
+}
+
+
+.dignityProduct {
+	padding: 40px 50px 48px;
+	background-color: $bgColorSiteTwo;
+	display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__info {
+        h2 {
+            margin-bottom: 23px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        ul>li {
+            width: calc(50% - 8px);
+            margin-bottom: 26px;
+            position: relative;
+        }
+
+        ul>li:last-child,
+        ul>li:nth-of-type(5) {
+            margin-bottom: 0;
+        }
+
+        ul>li::before {
+            width: 32px;
+            height: 32px;
+            top: 5px;
+            background-color: $mainColorSite;
+            color: $whiteColor;
+            display: inline-block;
+            position: absolute;
+            content: "\f067";
+            text-align: center;
+            display: inline-block;
+            font-family: FontAwesome;
+            font-size: 20px;
+            line-height: 32px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        ul>li p {
+            margin-left: 42px;
+        }
+    }
+}
+
+.scrinshots {
+
+    &__sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
+
+.scrinSection {
+	width: calc(50% - 3px);
+	display: flex;
+    margin-bottom: 22px;
+
+    &:last-child,
+    &:nth-of-type(3) {
+        margin-bottom: 0;
+    }
+
+    &__info {
+        margin-left: 14px;
+
+        h3 {
+            @include mainFont ($size: 24px, $lineHt: 23px, $color: $mainColorSite);
+            margin-bottom: 11px;
+        }
+    }
+
+    &__img {
+        padding-top: 2px;
+    }
+}
+
+
+.reviews {
+	background-color: $bgColorSiteTwo;
+    padding: 38px 50px 48px;
+
+    h2 {
+        margin-bottom: 28px;
+    }
+
+    &__sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+
+.reviewsSection {
+	width: calc(50% - 15px);
+	display: flex;
+    margin-bottom: 21px;
+
+    &:last-child,
+    &:nth-child(3) {
+        margin-bottom: 0;
+    }
+
+    &__img {
+        margin-right: 28px;
+        padding-top: 2px;
+
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 100%;
+        }
+    }
+
+    &__info {
+        background-color: $bgColorSite;
+        padding: 14px;
+        border-radius: 4px;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: $bgColorSite;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            left: -7px;
+            top: 32px;
+            -webkit-transform: rotate( 45deg );
+            -moz-transform: rotate( 45deg );
+            -ms-transform: rotate( 45deg );
+            -o-transform: rotate( 45deg );
+            transform: rotate( 45deg );
+        }
+
+        p {
+            @include mainFont ($size: 14px, $lineHt: 18px, $fWeight: 400);
+        }
+
+        .text {
+            font-style: italic;
+            color: #333;
+            margin-bottom: 7px;
+        }
+
+        .autor {
+            color: #989898;
+        }
+    }
+}
+
+.buyNow {
+
+    &__sections {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+
+        .buyPlan {
+            width: 296px;
+            margin-right: 45px;
+            background-color: $mainColorSite;
+            color: $whiteColor;
+            border-radius: 4px;
+            border: solid 2px $mainColorSite;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            h3 {
+                @include mainFont ($size: 24px, $color: $whiteColor);
+                padding: 15px 0;
+            }
+
+            .price {
+                background-color: $whiteColor;
+                @include mainFont ($size: 40px, $color: $mainColorSite);
+                text-align: center;
+                padding: 20px 0;
+            }
+        }
+
+        .planInfo {
+            padding: 16px 17px;
+
+            ol {
+                padding-left: 17px;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
+            ol>li {
+                @include mainFont ($size: 14px, $lineHt: 24px, $color: $whiteColor);
+            }
+
+            .btnMain {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+
+.contacts {
+	background-color: $mainColorSite;
+	color: $whiteColor;
+    padding: 50px 49px 50px;
+
+    h2 {
+        color: $whiteColor;
+        margin-bottom: 23px;
+    }
+}
+
+.contactBlock {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+
+    &__form {
+        width: 500px;
+        margin-right: 52px;
+        text-align: center;
+
+        input[type=submit] {
+            display: inline-block;
+        }
+
+        input[type=submit]:hover {
+            cursor: pointer;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            background-color: $whiteColor;
+            padding: 10px 0 10px 8px;
+            border: solid 2px $whiteColor;
+            display: block;
+            margin-bottom: 20px;
+            width: 100%;
+            outline: none;
+            transition-duration: .3s;
+
+            &::placeholder {
+                color: $mainColorSite;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:focus {
+                border: solid 2px #a4c0ff;
+            }
+        }
+    }
+
+    &__social {
+        .socLink {
+            text-decoration: none;
+            color: $whiteColor;
+            display: block;
+            margin-bottom: 8px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: "";
+                width: 26px;
+                height: 26px;
+                display: inline-block;
+                top: 6px;
+                position: relative;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        .skype:before {
+            background: url(../image/icons/skype.png) center no-repeat;
+        }
+        .icq:before {
+            background: url(../image/icons/icq.png) center no-repeat;
+        }
+
+        .mail:before {
+            background: url(../image/icons/mail.png) center no-repeat;
+        }
+
+        .phone:before {
+            background: url(../image/icons/phone.png) center no-repeat;
+        }
+
+        .socialContacts {
+            margin-bottom: 30px;
+        }
+
+        .addLink {
+            @include mainFont ($size: 20px, $lineHt: 42px, $color: $mainColorSite);
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $whiteColor;
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            margin-right: 6px;
+
+            &:hover {
+                background-color: $bgColorSiteTwo;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.copyright {
+	background-color: $bgColorSiteTwo;
+    text-align: center;
+    @include mainFont ($size: 12px, $color: $mainColorSite);
+	letter-spacing: .3px;
+	padding-top: 3px;
+}
+
+@media screen and (max-width: 1199px) {
+	.aboutProduct__info {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.buyNow__sections {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.buyNow__sections .buyPlan {
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+
+	.buyNow__sections .buyPlan:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.productName__info {
+		margin-bottom: 20px;
+	}
+
+	.scrinshots__sections {
+		flex-direction: column;
+	}
+
+	.scrinSection {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.scrinSection:last-child,
+	.scrinSection:nth-of-type(3) {
+		margin-bottom: 30px;
+	}
+
+	.contactBlock {
+		flex-direction: column;
+	}
+
+	.contactBlock__form {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+
+	.contactBlock__social {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.reviews__sections {
+		flex-direction: column;
+	}
+
+	.reviewsSection {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.productName__image img,
+	.aboutProduct__image img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.productName__info ul>li {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.productName__info h1 {
+		text-align: center;
+	}
+
+	.dignityProduct__info ul {
+		flex-direction: column;
+	}
+
+	.dignityProduct__info ul>li {
+		width: 100%;
+	}
+
+	.dignityProduct__info ul>li:last-child,
+	.dignityProduct__info ul>li:nth-of-type(5) {
+		margin-bottom: 26px;
+	}
+
+	.scrinSection {
+		flex-direction: column-reverse;
+	}
+
+	.scrinSection__info {
+		margin-bottom: 20px;
+		margin-left: 0;
+	}
+
+	.scrinSection__img {
+		text-align: center;
+	}
+
+	.reviewsSection {
+		flex-direction: column;
+		margin-bottom: 25px;
+	}
+
+	.reviewsSection__img {
+		margin-right: 0;
+		padding-top: 0;
+		text-align: center;
+	}
+
+	.reviewsSection__info::before {
+		display: none;
+	}
+
+	.buyNow__sections .buyPlan {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.productName__info h1 {
+		font-size: 46px;
+		line-height: 46px;
+	}
+
+	.scrinSection__info h3 {
+		line-height: 28px;
+	}
+
+	.productName__info ul>li {
+		font-size: 16px;
+	}
+
+	.page-padding,
+	.dignityProduct,
+	.reviews,
+	.contacts {
+		padding: 40px 30px 40px;
+	}
+}

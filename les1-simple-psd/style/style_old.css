@@ -23,9 +23,9 @@ body {
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
+	max-width: 1280px;
 }
 .container {
-	max-width: 1280px;
 	margin-right: auto;
 	margin-left: auto;
 }
