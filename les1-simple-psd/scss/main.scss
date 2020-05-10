@@ -132,7 +132,7 @@ h2 {
 
     &__info {
         float: left;
-        max-width: 57%;
+        width: 57%;
 
         .text>p {
             margin-bottom: 9px;
@@ -222,8 +222,13 @@ h2 {
 
 .scrinSection {
 	width: calc(50% - 3px);
-	display: flex;
     margin-bottom: 22px;
+
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
 
     &:last-child,
     &:nth-of-type(3) {
@@ -240,6 +245,8 @@ h2 {
     }
 
     &__img {
+        float: left;
+        margin-right: 14px;
         padding-top: 2px;
     }
 }
@@ -263,8 +270,13 @@ h2 {
 
 .reviewsSection {
 	width: calc(50% - 15px);
-	display: flex;
     margin-bottom: 21px;
+
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
 
     &:last-child,
     &:nth-child(3) {
@@ -272,8 +284,8 @@ h2 {
     }
 
     &__img {
-        margin-right: 28px;
         padding-top: 2px;
+        float: left;
 
         img {
             width: 75px;
@@ -287,6 +299,8 @@ h2 {
         padding: 14px;
         border-radius: 4px;
         position: relative;
+        max-width: 448px;
+        float: right;
 
         &::before {
             content: "";
@@ -503,31 +517,91 @@ h2 {
 	padding-top: 3px;
 }
 
-@media screen and (max-width: 1199px) {
-	.aboutProduct__info {
-		max-width: 100%;
-		margin-bottom: 20px;
-	}
+@media screen and (max-width: 1200px) {
+
+    .productName {
+        &__info {
+            width: 50%;
+        }
+
+        &__image {
+            width: 50%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
 
 	.buyNow__sections {
 		flex-direction: column;
-		align-items: center;
+        align-items: center;
+
+        .buyPlan {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+
+        .buyPlan:last-child {
+            margin-bottom: 0;
+        }
+
 	}
 
-	.buyNow__sections .buyPlan {
-		margin-right: 0;
-		margin-bottom: 40px;
-	}
+    .scrinSection {
+        width: 100%;
+    }
 
-	.buyNow__sections .buyPlan:last-child {
-		margin-bottom: 0;
-	}
+    .scrinSection:last-child,
+	.scrinSection:nth-of-type(3) {
+		margin-bottom: 30px;
+    }
+
+    .aboutProduct {
+        &__info {
+            width: 50%;
+        }
+    }
+
+    .reviewsSection {
+        &__info {
+            max-width: 400px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 991px) {
-	.productName__info {
-		margin-bottom: 20px;
-	}
+
+    .productName  {
+        text-align: center;
+
+        &__info {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__image {
+            width: 100%
+        }
+    }
+
+    .aboutProduct__image {
+        width: calc(50% - 20px);
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .reviewsSection {
+        &__img {
+            float: none;
+            text-align: center;
+        }
+
+        &__info::before {
+            display: none;
+        }
+    }
 
 	.scrinshots__sections {
 		flex-direction: column;
@@ -536,32 +610,46 @@ h2 {
 	.scrinSection {
 		width: 100%;
 		margin-bottom: 30px;
-	}
+    }
 
-	.scrinSection:last-child,
-	.scrinSection:nth-of-type(3) {
-		margin-bottom: 30px;
-	}
+    .dignityProduct__info ul > li {
+        width: 100%;
+    }
+
 
 	.contactBlock {
-		flex-direction: column;
-	}
+        flex-direction: column;
 
-	.contactBlock__form {
-		width: 100%;
-		margin-right: 0;
-		margin-bottom: 40px;
-	}
+        &__form {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
 
-	.contactBlock__social {
-		text-align: center;
-	}
+        &__social {
+            text-align: center;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
-	.reviews__sections {
-		flex-direction: column;
-	}
+
+    .aboutProduct {
+        &__info {
+            width: 100%;
+            float: none;
+        }
+
+        &__image {
+            float: none;
+        }
+    }
+
+	.reviews {
+        &__sections {
+            flex-direction: column;
+        }
+    }
 
 	.reviewsSection {
 		width: 100%;
@@ -624,10 +712,6 @@ h2 {
 		margin-right: 0;
 		padding-top: 0;
 		text-align: center;
-	}
-
-	.reviewsSection__info::before {
-		display: none;
 	}
 
 	.buyNow__sections .buyPlan {
