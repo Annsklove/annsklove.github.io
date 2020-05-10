@@ -1,0 +1,104 @@
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+	src: url('../font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%; /* прижать footer к низу */
+}
+
+body {
+	background-color: $mainBgColor;
+	font-family: Arial, Helvetica, sans-serif;
+	color: $mainColorText;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+	min-height: 100%;
+	display: flex; /* прижать footer к низу */
+	flex-direction: column; /* прижать footer к низу */
+	height: 100%; /* прижать footer к низу */
+}
+
+.content {
+	padding: 50px 50px 50px;
+    flex: 1 0 auto; /* прижать footer к низу */
+
+    h1 {
+        margin-bottom: 40px;
+        color: $mainTitleColor;
+        font-size: 38px;
+    }
+}
+
+.tasks {
+    &__link {
+        display: inline-block;
+        color: $mainLinkColor;
+        &:hover {
+            text-decoration: none;
+        }
+        &:visited {
+            color: $mainLinkVisited;
+        }
+    }
+
+    &__explanation {
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-left: 14px;
+            list-style: none;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                top: 8px;
+                background-color: $mainLinkColor;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}
+
+.contacts {
+    background-color: $footerBgColor;
+	padding: 20px 50px 20px;
+	color: $mainFooterTextColor;
+    flex-shrink: 0; /* прижать footer к низу */
+
+    &__socialIcons {
+        display: inline-block;
+        padding-right: 8px;
+        border-right: solid 1px #ffffff6b;
+        i {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+
+    &__info {
+        padding-left: 5px;
+        display: inline-block;
+        font-style: italic;
+    }
+}

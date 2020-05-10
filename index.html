@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style/style.css">
+    <!-- Мои стили-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Дефолтный сброс стилей -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- brjyrb - font-awesome-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <title>My tasks</title>
 </head>
@@ -17,14 +23,33 @@
         </div>
 
         <div class="tasks">
-            <p>Вебинарный курс, 1урок: <a href="les1-simple-psd/">les1-simple-psd</a></p>
-            <p>Интерактивный курс: <a href="interior-home/">interior-home</a></p><br>
+            <ul>
+                <li>
+                    <a class="tasks__link" href="les1-simple-psd/">Вебинарный курс, уроки 1,2</a>
+                    <p class="tasks__explanation">
+                        Вебинарный курс HTML5 и CSS3, задание для 1 и 2 уроков. Простоый адаптивный макет (адаптив без bootstrap)
+                    </p>
+                </li>
+                <li>
+                    <a class="tasks__link" href="interior-home/">Макет: interior-home</a>
+                    <p class="tasks__explanation">
+                        Интерактивный курс. Адаптивная верстка макета "interior-home" (с использованием bootstrap)
+                    </p>
+                </li>
+            </ul>
         </div>
     </div>
 
     <footer>
-        <div>
-            <p>Анна Скурская</p>
+        <div class="contacts">
+            <div class="contacts__socialIcons">
+                <a target="_blank" title="github" href="https://github.com/Annsklove">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="contacts__info">
+                <p>Анна Скурская</p>
+            <div>
         </div>
     </footer>
 
