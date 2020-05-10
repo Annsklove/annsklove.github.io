@@ -104,7 +104,7 @@ h2 {
 
         ul>li::before {
             content: "";
-            background: url(../image/icons/check.png) no-repeat;
+            background: url(../image/icons/check.png) 0 0/contain no-repeat;
             display: inline-block;
             width: 25px;
             height: 19px;
