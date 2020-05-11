@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'FontAwesome';
   src: url("../../font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -5,12 +6,16 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: SocialIco;
+  src: url("../fonts/Socialico.ttf"); }
+
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  background-color: #fff;
+  background-color: #ebebeb;
   font-size: 16px;
   line-height: 24px;
   color: #333;
@@ -23,10 +28,9 @@ body {
   max-width: 1280px; }
 
 .container {
-  margin-right: auto;
-  margin-left: auto; }
+  margin: 0 auto; }
 
-.page-padding {
+.container {
   padding: 42px 50px 48px; }
 
 h2 {
@@ -111,25 +115,25 @@ h2 {
       max-width: 469px;
       max-height: 214px; }
 
-.aboutProduct::after {
-  content: "";
-  clear: both;
-  display: block; }
-
-.aboutProduct__info {
-  float: left;
-  width: 57%; }
-  .aboutProduct__info .text > p {
-    margin-bottom: 9px; }
-  .aboutProduct__info .text > p:last-child {
-    margin-bottom: 0; }
-
-.aboutProduct__image {
-  float: right;
-  padding-top: 7px; }
-  .aboutProduct__image img {
-    max-width: 430px;
-    max-height: 245px; }
+.aboutProduct {
+  background-color: #fff; }
+  .aboutProduct::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .aboutProduct__info {
+    float: left;
+    max-width: 57%; }
+    .aboutProduct__info .text > p {
+      margin-bottom: 9px; }
+    .aboutProduct__info .text > p:last-child {
+      margin-bottom: 0; }
+  .aboutProduct__image {
+    float: right;
+    padding-top: 7px; }
+    .aboutProduct__image img {
+      max-width: 430px;
+      max-height: 245px; }
 
 .dignityProduct {
   padding: 40px 50px 48px;
@@ -181,23 +185,25 @@ h2 {
   .dignityProduct__info ul > li p {
     margin-left: 42px; }
 
-.scrinshots__sections {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+.scrinshots {
+  background-color: #fff; }
+  .scrinshots__sections {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
 
 .scrinSection {
   width: calc(50% - 3px);
   margin-bottom: 22px; }
   .scrinSection::after {
-    clear: both;
     content: "";
-    display: block; }
+    display: block;
+    clear: both; }
   .scrinSection:last-child, .scrinSection:nth-of-type(3) {
     margin-bottom: 0; }
   .scrinSection__info {
@@ -275,58 +281,60 @@ h2 {
     .reviewsSection__info .autor {
       color: #989898; }
 
-.buyNow__sections {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center; }
-  .buyNow__sections .buyPlan {
-    width: 296px;
-    margin-right: 45px;
-    background-color: #445161;
-    color: #fff;
-    border-radius: 4px;
-    border: solid 2px #445161; }
-    .buyNow__sections .buyPlan:last-child {
-      margin-right: 0; }
-    .buyNow__sections .buyPlan h3 {
-      font-size: 24px;
-      line-height: 24px;
+.buyNow {
+  background-color: #fff; }
+  .buyNow__sections {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center; }
+    .buyNow__sections .buyPlan {
+      max-width: 296px;
+      margin-right: 45px;
+      background-color: #445161;
       color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 500;
-      padding: 15px 0; }
-    .buyNow__sections .buyPlan .price {
-      background-color: #fff;
-      font-size: 40px;
-      line-height: 24px;
-      color: #445161;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 500;
-      text-align: center;
-      padding: 20px 0; }
-  .buyNow__sections .planInfo {
-    padding: 16px 17px; }
-    .buyNow__sections .planInfo ol {
-      padding-left: 17px;
-      text-align: left;
-      margin-bottom: 20px; }
-    .buyNow__sections .planInfo ol > li {
-      font-size: 14px;
-      line-height: 24px;
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 500; }
-    .buyNow__sections .planInfo .btnMain {
-      width: 100%; }
+      border-radius: 4px;
+      border: solid 2px #445161; }
+      .buyNow__sections .buyPlan:last-child {
+        margin-right: 0; }
+      .buyNow__sections .buyPlan h3 {
+        font-size: 24px;
+        line-height: 24px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        padding: 15px 0; }
+      .buyNow__sections .buyPlan .price {
+        background-color: #fff;
+        font-size: 40px;
+        line-height: 24px;
+        color: #445161;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        text-align: center;
+        padding: 20px 0; }
+    .buyNow__sections .planInfo {
+      padding: 16px 17px; }
+      .buyNow__sections .planInfo ol {
+        padding-left: 17px;
+        text-align: left;
+        margin-bottom: 20px; }
+      .buyNow__sections .planInfo ol > li {
+        font-size: 14px;
+        line-height: 24px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 500; }
+      .buyNow__sections .planInfo .btnMain {
+        width: 100%; }
 
 .contacts {
   background-color: #445161;
@@ -377,49 +385,61 @@ h2 {
         margin-bottom: 0; }
       .contactBlock__form .form-control:focus {
         border: solid 2px #a4c0ff; }
-  .contactBlock__social .socLink {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-    margin-bottom: 8px; }
-    .contactBlock__social .socLink:last-child {
-      margin-bottom: 0; }
-    .contactBlock__social .socLink:before {
-      content: "";
-      width: 26px;
-      height: 26px;
-      display: inline-block;
-      top: 6px;
-      position: relative; }
-    .contactBlock__social .socLink:hover {
-      opacity: 0.8; }
-  .contactBlock__social .skype:before {
-    background: url(../image/icons/skype.png) center no-repeat; }
-  .contactBlock__social .icq:before {
-    background: url(../image/icons/icq.png) center no-repeat; }
-  .contactBlock__social .mail:before {
-    background: url(../image/icons/mail.png) center no-repeat; }
-  .contactBlock__social .phone:before {
-    background: url(../image/icons/phone.png) center no-repeat; }
-  .contactBlock__social .socialContacts {
-    margin-bottom: 30px; }
-  .contactBlock__social .addLink {
-    font-size: 20px;
-    line-height: 42px;
-    color: #445161;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    display: inline-block;
-    border-radius: 50%;
-    background-color: #fff;
-    width: 42px;
-    height: 42px;
-    text-align: center;
-    margin-right: 6px; }
-    .contactBlock__social .addLink:hover {
-      background-color: #f5f5f5; }
-    .contactBlock__social .addLink:last-child {
-      margin-right: 0; }
+  .contactBlock__social {
+    /* Вариант с fa fa icon */
+    /* .addLink {
+            @include mainFont ($size: 20px, $lineHt: 42px, $color: $mainColorSite);
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $whiteColor;
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            margin-right: 6px;
+
+            &:hover {
+                background-color: $bgColorSiteTwo;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }*/ }
+    .contactBlock__social .socLink {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      margin-bottom: 8px; }
+      .contactBlock__social .socLink:last-child {
+        margin-bottom: 0; }
+      .contactBlock__social .socLink:before {
+        content: "";
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        top: 6px;
+        position: relative; }
+      .contactBlock__social .socLink:hover {
+        opacity: 0.8; }
+    .contactBlock__social .socialContacts {
+      margin-bottom: 30px; }
+    .contactBlock__social .skype:before {
+      background: url(../image/icons/skype.png) 0 0/contain no-repeat; }
+    .contactBlock__social .icq:before {
+      background: url(../image/icons/icq.png) 0 0/contain no-repeat; }
+    .contactBlock__social .mail:before {
+      background: url(../image/icons/mail.png) 0 0/contain no-repeat; }
+    .contactBlock__social .phone:before {
+      background: url(../image/icons/phone.png) 0 0/contain no-repeat; }
+    .contactBlock__social .socialAdd a {
+      font-family: SocialIco, sans-serif;
+      color: #fff;
+      font-size: 60px;
+      line-height: 44px;
+      font-style: normal;
+      text-decoration: none; }
+      .contactBlock__social .socialAdd a:hover {
+        color: #ebebeb; }
 
 .copyright {
   background-color: #f5f5f5;
@@ -440,7 +460,7 @@ h2 {
     .productName__image img {
       max-width: 100%; }
   .buyNow__sections .buyPlan {
-    width: 276px;
+    max-width: 276px;
     margin-right: 26px;
     margin-bottom: 0; }
   .scrinSection {
@@ -448,7 +468,7 @@ h2 {
     .scrinSection:nth-of-type(3) {
       margin-bottom: 30px; }
   .aboutProduct__info {
-    width: 50%; } }
+    max-width: 50%; } }
 
 @media screen and (max-width: 992px) {
   .buyNow__sections {
@@ -475,7 +495,7 @@ h2 {
     .productName__image {
       width: 100%; }
   .aboutProduct__info {
-    width: 100%;
+    max-width: 100%;
     float: none;
     margin-bottom: 20px; }
     .aboutProduct__info h2 {
@@ -615,8 +635,8 @@ h2 {
   .dignityProduct__info ul > li:nth-of-type(5) {
     margin-bottom: 26px; }
   .buyNow__sections .buyPlan {
-    width: 100%; }
-  .page-padding,
+    max-width: 100%; }
+  .container,
   .dignityProduct,
   .reviews,
   .contacts {

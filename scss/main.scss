@@ -1,3 +1,4 @@
+// иконочный шрифт FontAwesome
 @font-face {
 	font-family: 'FontAwesome';
 	src: url('../font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
@@ -5,6 +6,33 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+// Шрифт Futura
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/FuturaPT-Bold.eot');
+	src: url('../fonts/FuturaPT-Bold.woff') format('woff'),
+		url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/FuturaPT-Medium.eot');
+	src: url('../fonts/FuturaPT-Medium.woff') format('woff'),
+		url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/FuturaPT-Light.eot');
+	src: url('../fonts/FuturaPT-Light.woff') format('woff'),
+		url('../fonts/FuturaPT-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
 
 * {
 	margin: 0;
@@ -16,33 +44,69 @@ html {
 }
 
 body {
+    @include mainFont ( );
 	background-color: $mainBgColor;
 	font-family: Arial, Helvetica, sans-serif;
-	color: $mainColorText;
-	font-size: 16px;
-	line-height: 24px;
-	font-weight: 500;
 	min-height: 100%;
 	display: flex; /* прижать footer к низу */
 	flex-direction: column; /* прижать footer к низу */
-	height: 100%; /* прижать footer к низу */
+    height: 100%; /* прижать footer к низу */
 }
 
-.content {
-	padding: 50px 50px 50px;
+.mainContent {
     flex: 1 0 auto; /* прижать footer к низу */
 
-    h1 {
-        margin-bottom: 40px;
-        color: $mainTitleColor;
-        font-size: 38px;
+    &__info {
+        h1 {
+            @include mainFont ($size: 38px, $lineHt: 42px, $color: $mainTitleColor, $fWeight: 600);
+            font-family: 'Futura', Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 40px 0 30px;
+
+            &::selection {
+                color: #ff0; /* Цвет текста */
+                 background: #364f63; /* Цвет фона */
+            }
+        }
     }
 }
+
+.navbar {
+    background-color: $menuBgColor;
+    color: $menuTextColor;
+    font-family: 'Futura', Arial, Helvetica, sans-serif;
+    border-radius: 0;
+
+    a {
+        @include mainFont ($size: 14px, $lineHt: 24px, $color: $menuTextColor, $fWeight: 500);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .nav > li > a {
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #f1f1f142;
+        }
+    }
+
+    .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+}
+
 
 .tasks {
     &__link {
         display: inline-block;
         color: $mainLinkColor;
+        @include  mainFont ($size: 20px, $color: $mainLinkColor);
+        font-family: 'Futura';
+        text-decoration: underline;
+
         &:hover {
             text-decoration: none;
         }
@@ -70,7 +134,7 @@ body {
                 content: "";
                 width: 6px;
                 height: 6px;
-                top: 8px;
+                top: 10px;
                 background-color: $mainLinkColor;
                 border-radius: 50%;
                 position: absolute;
@@ -80,25 +144,30 @@ body {
     }
 }
 
-.contacts {
+footer {
     background-color: $footerBgColor;
-	padding: 20px 50px 20px;
-	color: $mainFooterTextColor;
-    flex-shrink: 0; /* прижать footer к низу */
 
-    &__socialIcons {
-        display: inline-block;
-        padding-right: 8px;
-        border-right: solid 1px #ffffff6b;
-        i {
-            color: #fff;
-            font-size: 18px;
+    .contacts {
+        padding: 20px 20px 20px;
+        color: $mainFooterTextColor;
+        flex-shrink: 0; /* прижать footer к низу */
+
+        &__socialIcons {
+            display: inline-block;
+            padding-right: 8px;
+            border-right: solid 1px #ffffff6b;
+            margin-bottom: 0;
+            i {
+                color: #fff;
+                font-size: 18px;
+            }
+        }
+
+        &__info {
+            padding-left: 5px;
+            display: inline-block;
+            font-style: italic;
         }
     }
-
-    &__info {
-        padding-left: 5px;
-        display: inline-block;
-        font-style: italic;
-    }
 }
+

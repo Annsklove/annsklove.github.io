@@ -16,7 +16,7 @@
 	.buyNow {
         &__sections {
             .buyPlan {
-                width: 276px;
+                max-width: 276px;
                 margin-right: 26px;
                 margin-bottom: 0;
             }
@@ -32,14 +32,12 @@
 
     .aboutProduct {
         &__info {
-            width: 50%;
+            max-width: 50%;
         }
     }
-
 }
 
 @media screen and (max-width: 992px) {
-
     .buyNow {
         &__sections {
             flex-direction: column;
@@ -76,7 +74,7 @@
 
     .aboutProduct {
         &__info {
-            width: 100%;
+            max-width: 100%;
             float: none;
             margin-bottom: 20px;
 
@@ -144,7 +142,6 @@
 }
 
 @media screen and (max-width: 767px) {
-
 	.reviewsSection {
         flex-direction: row;
 		width: 100%;
@@ -184,7 +181,6 @@
 }
 
 @media screen and (max-width: 576px) {
-
     .aboutProduct {
         &__image img {
             max-width: 100%;
@@ -299,11 +295,11 @@
 
 	.buyNow {
         &__sections .buyPlan {
-            width: 100%;
+            max-width: 100%;
         }
     }
 
-    .page-padding,
+    .container,
 	.dignityProduct,
 	.reviews,
 	.contacts {

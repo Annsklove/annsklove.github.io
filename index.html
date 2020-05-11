@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap-3.3.7 -->
+    <link rel="stylesheet" href="packages/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- bootstrap font-awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Мои стили-->
     <link rel="stylesheet" href="css/style.css">
     <!-- Дефолтный сброс стилей -->
     <link rel="stylesheet" href="css/normalize.css">
-
     <!-- brjyrb - font-awesome-->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
@@ -17,42 +23,106 @@
 
 <body>
 
-    <div class="content">
-        <div class="title">
-            <h1>Задания для курса GeekBrains:</h1>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
 
-        <div class="tasks">
-            <ul>
-                <li>
-                    <a class="tasks__link" href="les1-simple-psd/">Вебинарный курс, уроки 1,2</a>
-                    <p class="tasks__explanation">
-                        Вебинарный курс HTML5 и CSS3, задание для 1 и 2 уроков. Простоый адаптивный макет (адаптив без bootstrap)
-                    </p>
-                </li>
-                <li>
-                    <a class="tasks__link" href="interior-home/">Макет: interior-home</a>
-                    <p class="tasks__explanation">
-                        Интерактивный курс. Адаптивная верстка макета "interior-home" (с использованием bootstrap)
-                    </p>
-                </li>
-            </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+
+    <main class="mainContent">
+        <div class="container">
+            <div class="mainContent__info row col-md-12">
+                <div class="title">
+                    <h1>Задания для GeekBrains:</h1>
+                </div>
+
+                <div class="tasks">
+                    <ul>
+                        <li>
+                            <a class="tasks__link" href="les1-simple-psd/">Макет: simple-psd</a>
+                            <p class="tasks__explanation">
+                                Вебинарный курс HTML5 и CSS3. Задание для 1 и 2 уроков. Простоый адаптивный макет
+                                (адаптив без bootstrap)
+                            </p>
+                        </li>
+                        <li>
+                            <a class="tasks__link" href="interior-home/">Макет: interior-home</a>
+                            <p class="tasks__explanation">
+                                Интерактивный курс HTML5 и CSS3. Адаптивная верстка макета "interior-home" (с
+                                использованием bootstrap)
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
     <footer>
-        <div class="contacts">
-            <div class="contacts__socialIcons">
-                <a target="_blank" title="github" href="https://github.com/Annsklove">
-                    <i class="fa fa-github" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="contacts__info">
-                <p>Анна Скурская</p>
-            <div>
-        </div>
+        <div class="container">
+            <div class="contacts row col-md-12">
+                <address class="contacts__socialIcons">
+                    <a target="_blank" title="github" href="https://github.com/Annsklove">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </address>
+                <div class="contacts__info">
+                    <p>Анна Скурская</p>
+                    <div>
+                    </div>
+                </div>
     </footer>
 
+    <script src="packages/jquery/jquery1.12.4.min.js"></script>
+    <script src="packages/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

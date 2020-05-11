@@ -6,13 +6,18 @@
 	font-style: normal;
 }
 
+@font-face {
+    font-family: SocialIco;
+    src: url("../fonts/Socialico.ttf");
+}
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-    background-color: $whiteColor;
+    background-color: $bgColorSite;
     @include mainFont ();
 }
 
@@ -23,11 +28,10 @@ body {
 }
 
 .container {
-	margin-right: auto;
-	margin-left: auto;
+	margin: 0 auto;
 }
 
-.page-padding {
+.container {
 	padding: 42px 50px 48px;
 }
 
@@ -62,18 +66,13 @@ h2 {
 }
 
 .btnMain:focus {
-	background-color: $whiteColor;
+	background-color: $bgColorSiteThree;
 }
 
 .productName {
+    @include clearFix ();
 	background-color: $mainColorSite;
     color: $whiteColor;
-
-    &::after {
-        content: "";
-        display: block;
-        clear: both;
-    }
 
     &__info {
         float: left;
@@ -124,15 +123,12 @@ h2 {
 
 
 .aboutProduct {
-	&::after {
-        content: "";
-        clear: both;
-        display: block;
-    }
+    @include clearFix ();
+    background-color: $bgColorSiteThree;
 
     &__info {
         float: left;
-        width: 57%;
+        max-width: 57%;
 
         .text>p {
             margin-bottom: 9px;
@@ -211,6 +207,7 @@ h2 {
 }
 
 .scrinshots {
+    background-color: $bgColorSiteThree;
 
     &__sections {
         display: flex;
@@ -221,14 +218,9 @@ h2 {
 }
 
 .scrinSection {
+    @include clearFix ();
 	width: calc(50% - 3px);
     margin-bottom: 22px;
-
-    &::after {
-        clear: both;
-        content: "";
-        display: block;
-    }
 
     &:last-child,
     &:nth-of-type(3) {
@@ -327,6 +319,7 @@ h2 {
 }
 
 .buyNow {
+    background-color: $bgColorSiteThree;
 
     &__sections {
         display: flex;
@@ -336,7 +329,7 @@ h2 {
         text-align: center;
 
         .buyPlan {
-            width: 296px;
+            max-width: 296px;
             margin-right: 45px;
             background-color: $mainColorSite;
             color: $whiteColor;
@@ -461,26 +454,40 @@ h2 {
             }
         }
 
-        .skype:before {
-            background: url(../image/icons/skype.png) center no-repeat;
-        }
-        .icq:before {
-            background: url(../image/icons/icq.png) center no-repeat;
-        }
-
-        .mail:before {
-            background: url(../image/icons/mail.png) center no-repeat;
-        }
-
-        .phone:before {
-            background: url(../image/icons/phone.png) center no-repeat;
-        }
-
         .socialContacts {
             margin-bottom: 30px;
         }
 
-        .addLink {
+        .skype:before {
+            background: url(../image/icons/skype.png) 0 0/contain no-repeat;
+        }
+        .icq:before {
+            background: url(../image/icons/icq.png) 0 0/contain no-repeat;
+        }
+
+        .mail:before {
+            background: url(../image/icons/mail.png) 0 0/contain no-repeat;
+        }
+
+        .phone:before {
+            background: url(../image/icons/phone.png) 0 0/contain no-repeat;
+        }
+
+        .socialAdd a {
+            font-family: SocialIco, sans-serif;
+            color: $whiteColor;
+            font-size: 60px;
+            line-height: 44px;
+            font-style: normal;
+            text-decoration: none;
+
+            &:hover {
+                color: darken($color: $whiteColor, $amount: 8%);
+            }
+        }
+
+        /* Вариант с fa fa icon */
+        /* .addLink {
             @include mainFont ($size: 20px, $lineHt: 42px, $color: $mainColorSite);
             display: inline-block;
             border-radius: 50%;
@@ -497,7 +504,7 @@ h2 {
             &:last-child {
                 margin-right: 0;
             }
-        }
+        }*/
     }
 }
 

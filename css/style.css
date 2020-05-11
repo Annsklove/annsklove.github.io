@@ -6,6 +6,27 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/FuturaPT-Bold.eot");
+  src: url("../fonts/FuturaPT-Bold.woff") format("woff"), url("../fonts/FuturaPT-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/FuturaPT-Medium.eot");
+  src: url("../fonts/FuturaPT-Medium.woff") format("woff"), url("../fonts/FuturaPT-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/FuturaPT-Light.eot");
+  src: url("../fonts/FuturaPT-Light.woff") format("woff"), url("../fonts/FuturaPT-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -15,12 +36,13 @@ html {
   /* прижать footer к низу */ }
 
 body {
-  background-color: #f1f1f1;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
   font-size: 16px;
   line-height: 24px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,24 +56,64 @@ body {
   height: 100%;
   /* прижать footer к низу */ }
 
-.content {
-  padding: 50px 50px 50px;
+.mainContent {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   /* прижать footer к низу */ }
-  .content h1 {
-    margin-bottom: 40px;
+  .mainContent__info h1 {
+    font-size: 38px;
+    line-height: 42px;
     color: #3b96e4;
-    font-size: 38px; }
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-family: 'Futura', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 40px 0 30px; }
+    .mainContent__info h1::-moz-selection {
+      color: #ff0;
+      /* Цвет текста */
+      background: #364f63;
+      /* Цвет фона */ }
+    .mainContent__info h1::selection {
+      color: #ff0;
+      /* Цвет текста */
+      background: #364f63;
+      /* Цвет фона */ }
+
+.navbar {
+  background-color: #5e8eb5;
+  color: #fff;
+  font-family: 'Futura', Arial, Helvetica, sans-serif;
+  border-radius: 0; }
+  .navbar a {
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .navbar .nav > li > a:hover, .navbar .nav > li > a:focus, .navbar .nav > li > a:active {
+    background-color: #f1f1f142; }
+  .navbar .navbar-toggle .icon-bar {
+    background-color: #fff; }
 
 .tasks__link {
   display: inline-block;
-  color: #147ae2; }
+  color: #1496e2;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1496e2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-family: 'Futura';
+  text-decoration: underline; }
   .tasks__link:hover {
     text-decoration: none; }
   .tasks__link:visited {
-    color: #0f61b5; }
+    color: #167cb7; }
 
 .tasks__explanation {
   font-size: 14px;
@@ -69,27 +131,34 @@ body {
       content: "";
       width: 6px;
       height: 6px;
-      top: 8px;
-      background-color: #147ae2;
+      top: 10px;
+      background-color: #1496e2;
       border-radius: 50%;
       position: absolute;
       left: 0; }
 
-.contacts {
-  background-color: #506b80;
-  padding: 20px 50px 20px;
-  color: #fff;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  /* прижать footer к низу */ }
-  .contacts__socialIcons {
-    display: inline-block;
-    padding-right: 8px;
-    border-right: solid 1px #ffffff6b; }
-    .contacts__socialIcons i {
-      color: #fff;
-      font-size: 18px; }
-  .contacts__info {
-    padding-left: 5px;
-    display: inline-block;
-    font-style: italic; }
+footer {
+  background-color: #506b80; }
+  footer .contacts {
+    padding: 20px 20px 20px;
+    color: #fff;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    /* прижать footer к низу */ }
+    footer .contacts__socialIcons {
+      display: inline-block;
+      padding-right: 8px;
+      border-right: solid 1px #ffffff6b;
+      margin-bottom: 0; }
+      footer .contacts__socialIcons i {
+        color: #fff;
+        font-size: 18px; }
+    footer .contacts__info {
+      padding-left: 5px;
+      display: inline-block;
+      font-style: italic; }
+
+@media screen and (max-width: 480px) {
+  .mainContent__info h1 {
+    font-size: 32px;
+    margin: 10px 0 20px; } }

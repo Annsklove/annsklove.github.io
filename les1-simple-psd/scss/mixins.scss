@@ -1,15 +1,16 @@
-@mixin mainFont ($size: $fontSizeDef, $lineHt: 25px, $color: $colorGrey, $fWeight: 300) {
-    font-size: $size;
-    line-height: $lineHt;
-    color: $color;
-    font-family: "Rubik", sans-serif;
-    font-weight: $fWeight;
-}
 
-@mixin mainFont ($size: $fontSizeDef, $lineHt: 24px, $color: #333, $fWeight: 500) {
+@mixin mainFont ($size: $fontSizeMain, $lineHt: 24px, $color: #333, $fWeight: 500) {
     font-size: $size;
     line-height: $lineHt;
     color: $color;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: $fWeight;
+}
+
+@mixin clearFix () {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
 }
