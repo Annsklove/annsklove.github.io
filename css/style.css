@@ -61,32 +61,57 @@ body {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   /* прижать footer к низу */ }
-  .mainContent__info h1 {
-    font-size: 38px;
-    line-height: 42px;
-    color: #3b96e4;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-family: 'Futura', Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 40px 0 30px; }
-    .mainContent__info h1::-moz-selection {
-      color: #ff0;
-      /* Цвет текста */
-      background: #364f63;
-      /* Цвет фона */ }
-    .mainContent__info h1::selection {
-      color: #ff0;
-      /* Цвет текста */
-      background: #364f63;
-      /* Цвет фона */ }
+  .mainContent__info {
+    padding-bottom: 40px; }
+    .mainContent__info h1 {
+      font-size: 38px;
+      line-height: 42px;
+      color: #3b96e4;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-family: 'Futura', Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 40px 0 30px; }
+      .mainContent__info h1::-moz-selection {
+        color: #ff0;
+        /* Цвет текста */
+        background: #364f63;
+        /* Цвет фона */ }
+      .mainContent__info h1::selection {
+        color: #ff0;
+        /* Цвет текста */
+        background: #364f63;
+        /* Цвет фона */ }
+    .mainContent__info h2 {
+      font-size: 26px;
+      line-height: 28px;
+      color: #3b96e4;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-family: 'Futura', Arial, Helvetica, sans-serif;
+      margin: 30px 0 10px; }
+      .mainContent__info h2::-moz-selection {
+        color: #ff0;
+        /* Цвет текста */
+        background: #364f63;
+        /* Цвет фона */ }
+      .mainContent__info h2::selection {
+        color: #ff0;
+        /* Цвет текста */
+        background: #364f63;
+        /* Цвет фона */ }
+    .mainContent__info .delimiter {
+      width: 100%;
+      height: 1px;
+      background-color: #d4d4d4; }
 
 .navbar {
   background-color: #5e8eb5;
   color: #fff;
   font-family: 'Futura', Arial, Helvetica, sans-serif;
-  border-radius: 0; }
+  border-radius: 0;
+  margin: 0; }
   .navbar a {
     font-size: 14px;
     line-height: 24px;
@@ -100,34 +125,15 @@ body {
   .navbar .navbar-toggle .icon-bar {
     background-color: #fff; }
 
-.tasks__link {
-  display: inline-block;
-  color: #1496e2;
-  font-size: 20px;
-  line-height: 24px;
-  color: #1496e2;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-family: 'Futura';
-  text-decoration: underline; }
-  .tasks__link:hover {
-    text-decoration: none; }
-  .tasks__link:visited {
-    color: #167cb7; }
-
-.tasks__explanation {
-  font-size: 14px;
-  font-style: italic; }
-
-.tasks ul {
-  padding: 0; }
-  .tasks ul li {
-    font-size: 18px;
+.mainList {
+  padding: 0;
+  margin-bottom: 16px; }
+  .mainList > li {
     margin-bottom: 10px;
     padding-left: 14px;
     list-style: none;
     position: relative; }
-    .tasks ul li::before {
+    .mainList > li::before {
       content: "";
       width: 6px;
       height: 6px;
@@ -136,6 +142,27 @@ body {
       border-radius: 50%;
       position: absolute;
       left: 0; }
+  .mainList__link {
+    font-size: 20px;
+    line-height: 24px;
+    color: #1496e2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    color: #1496e2;
+    font-family: 'Futura';
+    text-decoration: underline; }
+    .mainList__link:hover {
+      text-decoration: none; }
+    .mainList__link:visited {
+      color: #167cb7; }
+  .mainList__explanation {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500; }
 
 footer {
   background-color: #506b80; }

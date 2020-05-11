@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -18,11 +18,10 @@
     <!-- brjyrb - font-awesome-->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
-    <title>My tasks</title>
+    <title>Анна - задания GeekBrains</title>
 </head>
 
 <body>
-
     <header>
         <nav class="navbar">
             <div class="container">
@@ -41,7 +40,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="useful.html">Полезности <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="#">GeekBrains <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Link</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -79,28 +79,30 @@
 
     <main class="mainContent">
         <div class="container">
-            <div class="mainContent__info row col-md-12">
-                <div class="title">
-                    <h1>Задания для GeekBrains:</h1>
-                </div>
+            <div class="mainContent__info row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h1>Задания для GeekBrains:</h1>
+                    </div>
 
-                <div class="tasks">
-                    <ul>
-                        <li>
-                            <a class="tasks__link" href="les1-simple-psd/">Макет: simple-psd</a>
-                            <p class="tasks__explanation">
-                                Вебинарный курс HTML5 и CSS3. Задание для 1 и 2 уроков. Простоый адаптивный макет
-                                (адаптив без bootstrap)
-                            </p>
-                        </li>
-                        <li>
-                            <a class="tasks__link" href="interior-home/">Макет: interior-home</a>
-                            <p class="tasks__explanation">
-                                Интерактивный курс HTML5 и CSS3. Адаптивная верстка макета "interior-home" (с
-                                использованием bootstrap)
-                            </p>
-                        </li>
-                    </ul>
+                    <div class="mainList">
+                        <ul>
+                            <li>
+                                <a class="mainList__link" href="les1-simple-psd/">Макет: simple-psd</a>
+                                <p class="mainList__explanation">
+                                    Вебинарный курс HTML5 и CSS3. Задание для 1 и 2 уроков. Простоый адаптивный макет
+                                    (адаптив без bootstrap)
+                                </p>
+                            </li>
+                            <li>
+                                <a class="mainList__link" href="interior-home/">Макет: interior-home</a>
+                                <p class="mainList__explanation">
+                                    Интерактивный курс HTML5 и CSS3. Адаптивная верстка макета "interior-home" (с
+                                    использованием bootstrap)
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,18 +110,21 @@
 
     <footer>
         <div class="container">
-            <div class="contacts row col-md-12">
-                <address class="contacts__socialIcons">
-                    <a target="_blank" title="github" href="https://github.com/Annsklove">
-                        <i class="fa fa-github" aria-hidden="true"></i>
-                    </a>
-                </address>
-                <div class="contacts__info">
-                    <p>Анна Скурская</p>
+            <div class="contacts row">
+                <div class="col-md-12">
+                    <address class="contacts__socialIcons">
+                        <a target="_blank" title="github" href="https://github.com/Annsklove">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    </address>
+                    <div class="contacts__info">
+                        <p>Анна Скурская</p>
                     <div>
-                    </div>
                 </div>
+            </div>
+        </div>
     </footer>
+
 
     <script src="packages/jquery/jquery1.12.4.min.js"></script>
     <script src="packages/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
