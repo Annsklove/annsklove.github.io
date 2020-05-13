@@ -1,0 +1,54 @@
+.listCode {
+    padding: 0;
+    margin-bottom: 16px;
+
+    & > li {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        list-style: none;
+        position: relative;
+        font-size: 14px;
+        line-height: 24px;
+
+        .bold {
+            font-weight: 600;
+            color: #717171;
+            text-align: right;
+            display: inline-block;
+            width: 20px;
+            margin-right: 6px;
+        }
+    }
+
+    code {
+        @include mainFont ($size: 16px, $lineHt: 20px, $color: $codeTextColor, $fWeight: 500);
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+        display: block;
+        background: $codeBgColor;
+        border: solid 1px $codeBrdColor;
+        padding: 2px 5px;
+        border-radius: 4px;
+
+        &::selection {
+            color: #ff0;
+            background: #364f63;
+        }
+
+        .example {
+            color: #c38989;
+        }
+        .textExample {
+            font-size: 14px;
+            margin: 5px 0 0;
+            color: #7d7d7d;
+        }
+    }
+
+    .highlighting {
+        color: #056ad2;
+    }
+
+    &__explanation {
+        @include mainFont ($size: 13px, $lineHt: 16px);
+    }
+}
