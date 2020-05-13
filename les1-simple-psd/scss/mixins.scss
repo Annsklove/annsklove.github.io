@@ -15,7 +15,7 @@
     }
 }
 
-@mixin btnBasis ($brdRad: 4px, $btnWidth: 140px, $bgColor: $whiteColor, $bgTextColor: #fff) {
+@mixin btnBasis ($brdRad: 4px, $btnWidth: 140px, $bgColor: $whiteColor, $bgTextColor: $mainColorSite) {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
