@@ -14,3 +14,23 @@
         clear: both;
     }
 }
+
+@mixin btnBasis ($brdRad: 4px, $btnWidth: 140px, $bgColor: $whiteColor, $bgTextColor: #fff) {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-duration: .3s;
+    border-radius: $brdRad;
+    width: $btnWidth;
+    @include mainFont ($size: 18px, $lineHt: 40px, $color: $bgTextColor, $fWeight: 600);
+    background-color: $bgColor;
+    outline: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($bgColor, 8%);
+    }
+    &:focus {
+        background-color: lighten($bgColor, 10%);
+    }
+}

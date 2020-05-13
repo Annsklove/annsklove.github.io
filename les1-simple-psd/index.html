@@ -22,35 +22,54 @@
 <body>
     <div class="wrapper">
 
-        <!-- Product name -->
-        <header class="productName container">
-            <div class="productName__info">
-                <div class="title">
-                    <h1>Product name</h1>
+        <header class="videoBlock container">
+                <div class="videoBlock__info">
+                    <h1>Video block</h1>
+                    <p>Block with video background</p>
+
+                    <form class="videoBlock__form">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Write something..">
+                            <input class="btnForm" type="submit" value="Send">
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            Put on this page information about your product
-                        </li>
-                        <li>
-                            A detailed description of your product
-                        </li>
-                        <li>
-                            Tell us about the advantages and merits
-                        </li>
-                        <li>
-                            Associate the page with the payment system
-                        </li>
-                    </ul>
+                <div class="videoBlock__bgOverlay">
+                    <video autoplay loop muted poster="">
+                        <source src="video/video-monkey.mp4" type="video/mp4">
+                    </video>
                 </div>
-            </div>
-            <div class="productName__image">
-                <img src="image/test-img-1.jpg" alt="product image">
-            </div>
         </header>
 
         <main>
+            <!-- Product name -->
+            <div class="productName container">
+                <div class="productName__info">
+                    <div class="title">
+                        <h2>Product name</h2>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>
+                                Put on this page information about your product
+                            </li>
+                            <li>
+                                A detailed description of your product
+                            </li>
+                            <li>
+                                Tell us about the advantages and merits
+                            </li>
+                            <li>
+                                Associate the page with the payment system
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="productName__image">
+                    <img src="image/test-img-1.jpg" alt="product image">
+                </div>
+            </div>
+
             <!-- About product -->
             <div class="aboutProduct container">
                 <div class="aboutProduct__info">

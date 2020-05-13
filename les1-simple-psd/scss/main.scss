@@ -28,11 +28,8 @@ body {
 }
 
 .container {
-	margin: 0 auto;
-}
-
-.container {
-	padding: 42px 50px 48px;
+    margin: 0 auto;
+    padding: 42px 50px 48px;
 }
 
 h2 {
@@ -48,25 +45,109 @@ h2 {
 }
 
 .btnMain {
-	text-align: center;
-    text-transform: uppercase;
-    @include mainFont ($size: 18px, $lineHt: 40px, $color: $mainColorSite, $fWeight: 600);
-	background-color: $whiteColor;
-	text-decoration: none;
-	border-radius: 4px;
-	width: 140px;
-	height: 40px;
+    @include btnBasis ();
 	display: block;
-	transition-duration: .3s;
-	border: none;
+    border: none;
 }
 
-.btnMain:hover {
-	background-color: $bgColorSite;
-}
+.videoBlock {
+    z-index: 1;
+    display: flex;
+    background-color: #d3d3d3;
+    color: $whiteColor;
+    position: relative;
+    min-height: 420px;
+    max-height: 600px;
+    text-align: center;
+    align-items: center;
 
-.btnMain:focus {
-	background-color: $bgColorSiteThree;
+    &__bgOverlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #232a34;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: -webkit-gradient(linear,left top,left bottom, 
+            from(rgba(0,0,0,0.2)),to(rgba(0,0,0,0.2))),
+            -webkit-gradient(linear,left top,left bottom,
+            from(rgba(0,0,0,0.2)),to(transparent));
+            background: linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%),linear-gradient(180deg,rgba(0,0,0,0.2) 0%,transparent 100%);
+            z-index: 2;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        z-index: 3;
+        h1 {
+            @include mainFont ($size: 44px, $lineHt:62px, $color: $whiteColor, $fWeight: 600);
+            text-shadow: 1px 1px 0px #0000004c;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+
+    &__form {
+        margin-top: 20px;
+        .input-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .form-control {
+            display: inline;
+            border-radius: 4px;
+            background-color: #ffffffa3;
+            padding: 0 12px 0;
+            border: solid 1px #909090;
+            outline: none;
+            line-height: 40px;
+            transition-duration: .3s;
+
+            &:focus {
+                background-color: #fff;
+            }
+
+            &:not(:last-child) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        .btnForm {
+            @include btnBasis ($btnWidth: 120px, $bgColor: #e85813);
+            display: inline;
+            border: solid 1px #bb440b;
+            margin-left: -1px;
+            font-weight: 500;
+            color: #fff;
+
+            & {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
 }
 
 .productName {
@@ -81,7 +162,7 @@ h2 {
             margin-bottom: 37px;
         }
 
-        h1 {
+        h2 {
             @include mainFont ($size: 60px, $lineHt:62px, $color: $whiteColor);
             text-shadow: 1px 1px 0px #0000004c;
         }
@@ -121,7 +202,6 @@ h2 {
     }
 }
 
-
 .aboutProduct {
     @include clearFix ();
     background-color: $bgColorSiteThree;
@@ -149,7 +229,6 @@ h2 {
         }
     }
 }
-
 
 .dignityProduct {
 	padding: 40px 50px 48px;
@@ -243,7 +322,6 @@ h2 {
     }
 }
 
-
 .reviews {
 	background-color: $bgColorSiteTwo;
     padding: 38px 50px 48px;
@@ -258,7 +336,6 @@ h2 {
         justify-content: space-between;
     }
 }
-
 
 .reviewsSection {
 	width: calc(50% - 15px);
@@ -373,7 +450,6 @@ h2 {
     }
 
 }
-
 
 .contacts {
 	background-color: $mainColorSite;
