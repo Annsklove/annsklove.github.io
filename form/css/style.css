@@ -2,7 +2,7 @@
   font-family: 'ProximaNova';
   src: url("../../fonts/ProximaNova/ProximaNova-Black.eot");
   src: url("../../fonts/ProximaNova/ProximaNova-Black.woff") format("woff");
-  src: url("../../fonts/ProximaNova/ProximaNova-Black.eot") format("truetype");
+  src: url("../../fonts/ProximaNova/ProximaNova-Black.ttf") format("truetype");
   font-weight: 800;
   font-style: normal; }
 
@@ -10,7 +10,7 @@
   font-family: 'ProximaNova';
   src: url("../../fonts/ProximaNova/ProximaNova-Bold.eot");
   src: url("../../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff");
-  src: url("../../fonts/ProximaNova/ProximaNova-Bold.eot") format("truetype");
+  src: url("../../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal; }
 
@@ -18,7 +18,7 @@
   font-family: 'ProximaNova';
   src: url("../../fonts/ProximaNova/ProximaNova-Regular.eot");
   src: url("../../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff");
-  src: url("../../fonts/ProximaNova/ProximaNova-Regular.eot") format("truetype");
+  src: url("../../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 
@@ -26,7 +26,39 @@
   font-family: 'ProximaNova';
   src: url("../../fonts/ProximaNova/ProximaNova-Light.eot");
   src: url("../../fonts/ProximaNova/ProximaNova-Light.woff") format("woff");
-  src: url("../../fonts/ProximaNova/ProximaNova-Light.eot") format("truetype");
+  src: url("../../fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../../fonts/Gotham/Gotham-Ultra.eot");
+  src: url("../../fonts/Gotham/Gotham-Ultra.woff") format("woff");
+  src: url("../../fonts/Gotham/Gotham-Ultra.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../../fonts/Gotham/Gotham-Black.eot");
+  src: url("../../fonts/Gotham/Gotham-Black.woff") format("woff");
+  src: url("../../fonts/Gotham/Gotham-Black.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../../fonts/Gotham/Gotham-Bold.eot");
+  src: url("../../fonts/Gotham/Gotham-Bold.woff") format("woff");
+  src: url("../../fonts/Gotham/Gotham-Bold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../../fonts/Gotham/Gotham-Medium.eot");
+  src: url("../../fonts/Gotham/Gotham-Medium.woff") format("woff");
+  src: url("../../fonts/Gotham/Gotham-Medium.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 
@@ -42,9 +74,8 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #666;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-family: 'ProximaNova', Arial, Helvetica, sans-serif; }
+  font-family: 'Gotham', Arial, Helvetica, sans-serif;
+  font-weight: 500; }
 
 .signUp {
   min-height: 100vh;
@@ -84,7 +115,7 @@ body {
       font-size: 39px;
       line-height: 42px;
       color: #333;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Gotham', Arial, Helvetica, sans-serif;
       font-weight: 800;
       margin-bottom: 70px; }
   .signUp .signForm__wrapInput {
@@ -92,7 +123,7 @@ body {
     margin-bottom: 45px; }
     .signUp .signForm__wrapInput label {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 500;
       color: #999;
       line-height: 1.2;
       padding-left: 2px; }
@@ -101,8 +132,8 @@ body {
       font-size: 22px;
       line-height: 1.2;
       color: #555;
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 600;
+      font-family: 'Gotham', Arial, Helvetica, sans-serif;
+      font-weight: 500;
       display: block;
       border: none;
       padding: 0 2px;
@@ -111,13 +142,19 @@ body {
       background: transparent;
       padding: 0 2px; }
       .signUp .signForm__wrapInput input::-webkit-input-placeholder {
-        color: #ccc; }
+        color: #ccc;
+        font-weight: 400; }
       .signUp .signForm__wrapInput input:-ms-input-placeholder {
-        color: #ccc; }
+        color: #ccc;
+        font-weight: 400; }
       .signUp .signForm__wrapInput input::-ms-input-placeholder {
-        color: #ccc; }
+        color: #ccc;
+        font-weight: 400; }
       .signUp .signForm__wrapInput input::placeholder {
-        color: #ccc; }
+        color: #ccc;
+        font-weight: 400; }
+      .signUp .signForm__wrapInput input:invalid {
+        background-color: #fbf1f2; }
   .signUp .signForm .input-focus {
     width: 100%;
     position: relative; }
@@ -138,3 +175,30 @@ body {
       background: -o-linear-gradient(45deg, #d5007d, #e53935);
       background: -moz-linear-gradient(45deg, #d5007d, #e53935);
       background: linear-gradient(45deg, #d5007d, #e53935); }
+  .signUp .btnForm__color {
+    background: #e8519e;
+    background: -webkit-linear-gradient(top, #e8519e, #c77ff2, #e8519e, #c77ff2); }
+  .signUp .btnForm__submit {
+    height: 50px;
+    min-width: 240px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    border-radius: 25px;
+    background-image: -webkit-linear-gradient(45deg, #ff66b4 0%, #c77ff2 50%, #e8519e 100%);
+    background-image: -o-linear-gradient(45deg, #ff66b4 0%, #c77ff2 50%, #e8519e 100%);
+    background-image: linear-gradient(45deg, #ff66b4 0%, #c77ff2 50%, #e8519e 100%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+    .signUp .btnForm__submit:hover {
+      background-position: 0 0;
+      cursor: pointer; }
