@@ -222,6 +222,14 @@ h2 {
     .productName__image img {
       max-width: 469px;
       max-height: 214px; }
+  .productName__video {
+    float: right;
+    padding-top: 6px; }
+    .productName__video video {
+      outline: none !important;
+      border: none !important;
+      max-width: 469px;
+      height: auto; }
 
 .aboutProduct {
   background-color: #fff; }
@@ -567,6 +575,10 @@ h2 {
     width: 50%; }
     .productName__image img {
       max-width: 100%; }
+  .productName__video {
+    width: 50%; }
+    .productName__video video {
+      max-width: 100%; }
   .buyNow__sections .buyPlan {
     width: 276px;
     margin-right: 26px;
@@ -598,6 +610,8 @@ h2 {
         text-align: left;
         display: inline-block; }
     .productName__image {
+      width: 100%; }
+    .productName__video {
       width: 100%; }
   .aboutProduct__info {
     max-width: 100%;
@@ -690,6 +704,8 @@ h2 {
   .productName__image img {
     max-width: 100%;
     height: auto; }
+  .productName__video video {
+    max-width: 100%; }
   .productName__info h1 {
     font-size: 54px;
     line-height: 56px; }

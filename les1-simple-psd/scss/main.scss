@@ -200,6 +200,18 @@ h2 {
             max-height: 214px;
         }
     }
+
+    &__video {
+        float: right;
+        padding-top: 6px;
+
+        video {
+            outline: none!important;
+            border: none!important;
+            max-width: 469px;
+            height: auto;
+        }
+    }
 }
 
 .aboutProduct {
