@@ -10,13 +10,19 @@
         font-size: 14px;
         line-height: 24px;
 
-        .bold {
+        .number {
             font-weight: 600;
             color: #717171;
             text-align: right;
             display: inline-block;
             width: 20px;
             margin-right: 6px;
+        }
+    }
+
+    &.min-margin {
+        & > li {
+            margin-bottom: 5px;
         }
     }
 
@@ -45,7 +51,11 @@
     }
 
     .highlighting {
-        color: #056ad2;
+        color: $highlightingColor;
+    }
+
+    .highlightCode {
+        color: $codeTextColor;
     }
 
     &__explanation {

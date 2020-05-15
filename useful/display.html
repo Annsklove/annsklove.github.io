@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap-3.3.7 -->
+    <link rel="stylesheet" href="../vendors/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!-- bootstrap font-awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Мои стили-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Дефолтный сброс стилей -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- brjyrb - font-awesome-->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+    <title>Display-подсказки</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="../index.html">GeekBrains <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../useful.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">Полезности <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../useful.html">Все полезности</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="../useful/git.html">Git</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <main class="mainContent">
+        <div class="container">
+            <div class="mainContent__info row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h1>Display: полезные ссылки</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2>Flex</h2>
+                            <ul class="mainList">
+                                <li>
+                                    <a class="mainList__link" href="https://tpverstak.ru/flex-cheatsheet/"
+                                        target="_blank">tpverstak.ru/flex</a>
+                                    <p class="mainList__explanation">
+                                        Шпаргалка по Flex CSS - с примерами
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h2>Grid</h2>
+                            <ul class="mainList">
+                                <li>
+                                    <a class="mainList__link" href="https://tpverstak.ru/grid/"
+                                        target="_blank">tpverstak.ru/grid</a>
+                                    <p class="mainList__explanation">
+                                        Шпаргалка по Grid CSS - с примерами
+                                    </p>
+                                </li>
+                                <li>
+                                    <a class="mainList__link" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout"
+                                        target="_blank">Grid_Layout</a>
+                                    <p class="mainList__explanation">
+                                        Основные понятия Grid
+                                    </p>
+                                </li>
+                                <li>
+                                    <a class="mainList__link" href="http://cssgridgarden.com/#ru"
+                                        target="_blank">Grid Game</a>
+                                    <p class="mainList__explanation">
+                                        Игра-тренинг по Grid :&#41;
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4">
+                            <h2>Float</h2>
+                        </div>
+                    </div>
+
+                    <div class="delimiter"></div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Flex - подробней</h2>
+                        </div>
+                    </div>
+
+                    <div class="delimiter"></div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Grid - подробней</h2>
+
+                            <p class="highlightBlock"> Cм. примеры кода с урока GeekBrains (HTML, HTML5, CSS, CSS3 &#8594; Вебинар &#8594; <b>4 less</b>)</p>
+
+                            <h3>Grid: основные понятия</h3>
+
+                            <ul class="listCode min-margin">
+                                <li>
+                                    <span class="highlighting">Grid контейнер</span> &#8594; контейнер, у которого объявлено <span class="highlightCode">display: grid</span> или <span class="highlightCode">display: inline-grid</span>. Все прямые потомки теперь являются grid элементами.
+                                </li>
+
+                                <li>
+                                    <span class="highlighting">Grid Tracks</span> &#8594;
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="delimiter"></div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Float - подробней</h2>
+                        </div>
+                    </div>
+
+                    <div class="delimiter"></div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contacts row">
+                <div class="col-md-12">
+                    <address class="contacts__socialIcons">
+                        <a target="_blank" title="github" href="https://github.com/Annsklove">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    </address>
+                    <div class="contacts__info">
+                        <p>Анна Скурская</p>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+    </footer>
+
+    <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

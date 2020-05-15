@@ -53,6 +53,39 @@ body {
     height: 100%; /* прижать footer к низу */
 }
 
+.highlightText {
+    color: $codeTextColor;
+}
+
+.highlightBlock {
+    position: relative;
+    padding-left: 18px;
+    &::before {
+        content: "\f0a9";
+        font-family: 'FontAwesome';
+        font-size: 16px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $codeTextColor;
+        display: inline-block;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.delimiter {
+    width: 100%;
+    height: 1px;
+    background-color: $delimiterColor;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
 .mainContent {
     flex: 1 0 auto; /* прижать footer к низу */
 
@@ -83,10 +116,20 @@ body {
             }
         }
 
-        .delimiter {
-            width: 100%;
-            height: 1px;
-            background-color: $delimiterColor;
+        h3 {
+            @include mainFont ($size: 24px, $lineHt: 26px, $color: $mainTitleColor, $fWeight: 500);
+            font-family: 'Futura', Arial, Helvetica, sans-serif;
+            margin: 20px 0 10px;
+
+            &::selection {
+                color: #ff0;
+                background: #364f63;
+            }
+        }
+
+        &__explanation {
+            font-style: italic;
+            @include mainFont ($size: 14px);
         }
     }
 }
@@ -152,11 +195,6 @@ body {
         &:visited {
             color: $mainLinkVisited;
         }
-    }
-
-    &__explanation {
-        font-style: italic;
-        @include mainFont ($size: 14px);
     }
 }
 

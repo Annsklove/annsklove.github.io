@@ -36,7 +36,7 @@ html {
   /* прижать footer к низу */ }
 
 body {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   color: #333;
   font-family: Arial, Helvetica, sans-serif;
@@ -55,6 +55,33 @@ body {
   /* прижать footer к низу */
   height: 100%;
   /* прижать footer к низу */ }
+
+.highlightText {
+  color: #c7254e; }
+
+.highlightBlock {
+  position: relative;
+  padding-left: 18px; }
+  .highlightBlock::before {
+    content: "\f0a9";
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #c7254e;
+    display: inline-block; }
+
+.bold {
+  font-weight: 600; }
+
+.delimiter {
+  width: 100%;
+  height: 1px;
+  background-color: #d4d4d4; }
+
+.mb-20 {
+  margin-bottom: 20px; }
 
 .mainContent {
   -webkit-box-flex: 1;
@@ -97,10 +124,27 @@ body {
       .mainContent__info h2::selection {
         color: #ff0;
         background: #364f63; }
-    .mainContent__info .delimiter {
-      width: 100%;
-      height: 1px;
-      background-color: #d4d4d4; }
+    .mainContent__info h3 {
+      font-size: 24px;
+      line-height: 26px;
+      color: #3b96e4;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500;
+      font-family: 'Futura', Arial, Helvetica, sans-serif;
+      margin: 20px 0 10px; }
+      .mainContent__info h3::-moz-selection {
+        color: #ff0;
+        background: #364f63; }
+      .mainContent__info h3::selection {
+        color: #ff0;
+        background: #364f63; }
+    .mainContent__info__explanation {
+      font-style: italic;
+      font-size: 14px;
+      line-height: 24px;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 500; }
 
 .navbar {
   background-color: #5e8eb5;
@@ -152,13 +196,6 @@ body {
       text-decoration: none; }
     .mainList__link:visited {
       color: #167cb7; }
-  .mainList__explanation {
-    font-style: italic;
-    font-size: 14px;
-    line-height: 24px;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500; }
 
 footer {
   background-color: #506b80; }
@@ -191,13 +228,15 @@ footer {
     position: relative;
     font-size: 14px;
     line-height: 24px; }
-    .listCode > li .bold {
+    .listCode > li .number {
       font-weight: 600;
       color: #717171;
       text-align: right;
       display: inline-block;
       width: 20px;
       margin-right: 6px; }
+  .listCode.min-margin > li {
+    margin-bottom: 5px; }
   .listCode code {
     font-size: 16px;
     line-height: 20px;
@@ -223,7 +262,9 @@ footer {
       margin: 5px 0 0;
       color: #7d7d7d; }
   .listCode .highlighting {
-    color: #056ad2; }
+    color: #099800; }
+  .listCode .highlightCode {
+    color: #c7254e; }
   .listCode__explanation {
     font-size: 13px;
     line-height: 16px;

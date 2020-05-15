@@ -18,7 +18,7 @@
     <!-- brjyrb - font-awesome-->
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
 
-    <title>Анна - git-подсказки</title>
+    <title>Git-подсказки</title>
 </head>
 
 <body>
@@ -200,7 +200,7 @@
                                     > git status
                                 </code>
                                 <p class="listCode__explanation">
-                                    Информаци о текущем состоянии файлов репозиторий. Список измененных и не добавленных
+                                    Информаци о текущем состоянии файлов репозитория. Список измененных и не добавленных
                                     файлов.
                                 </p>
                             </li>
@@ -248,48 +248,92 @@
 
                         </ul>
 
+                        <div class="delimiter"></div>
+
                         <h2>Краткий ход действий:</h2>
-                        <ul class="listCode">
+                        <ul class="listCode min-margin">
                             <li>
-                                <span class="bold">1.</span> Клонируем репозиторий <span class="highlighting">"clone"</span><br>
+                                <span class="number">1.</span> Клонируем репозиторий <span
+                                    class="highlighting">clone</span>
+                            </li>
+                            <li>
+                                <span class="number">2.1</span> Получаем удаленные ветку/ветки <span
+                                    class="highlighting">checkout --track
+                                    origin/</span> (если это нужно и они уже существуют) и подтягиваем в неё изменения
+                                из удаленного репозитория <span class="highlighting">pull origin</span>
+                            </li>
 
-                                <span class="bold">2.1</span> Получаем удаленные ветку/ветки <span class="highlighting">"checkout --track
-                                    origin/"</span> (если это нужно и они уже существуют) и подтягиваем в неё изменения
-                                из удаленного репозитория <span class="highlighting">"pull origin"</span><br>
+                            <li>
+                                <span class="number">2.2</span> ИЛИ создаем новую локальную ветку <span
+                                    class="highlighting">checkout
+                                    -b</span> (если такая ветка существует, то вливаем в неё изменения из удаленного
+                                репозитория) <span class="highlighting">pull origin</span>
+                            </li>
 
-                                <span class="bold">2.2</span> ИЛИ создаем новую локальную ветку <span class="highlighting">"checkout
-                                    -b"</span> (если такая ветка существует, то вливаем в неё изменения из удаленного
-                                репозитория) <span class="highlighting">"pull origin"</span><br>
+                            <li>
+                                <span class="number">3.1</span> Смотрим список изменений и зафиксированных /
+                                незафиксированных файлов <span class="highlighting">status</span>
+                            </li>
 
-                                <span class="bold">3.1</span> ПСмотрим список изменений и зафиксированных / незафиксированных файлов <span
-                                    class="highlighting">"status"</span><br>
+                            <li>
+                                <span class="number">3.2</span> Поработав в ветке - фиксируем изменения <span
+                                    class="highlighting">add</span>
+                            </li>
 
-                                <span class="bold">3.2</span> Поработав в ветке - фиксируем изменения <span
-                                    class="highlighting">"add"</span><br>
+                            <li><span class="number">4.</span> Коммитим изменения <span class="highlighting">commit
+                                    -m</span></li>
 
-                                <span class="bold">4.</span> Коммитим изменения <span class="highlighting">"commit -m"</span><br>
+                            <li>
+                                <span class="number">5.</span> Вливаем в нашу ветку изменения из master И из ветки dev
+                                (ветка разработчиков,
+                                если такая есть)<span class="highlighting">pull origin</span>
+                            </li>
 
-                                <span class="bold">5.</span> Вливаем в нашу ветку изменения из master И из ветки dev (ветка разработчиков,
-                                если такая есть)<span class="highlighting">"pull origin"</span><br>
+                            <li>
+                                <span class="number">6.</span> Отправляем изменения в удаленный репозиторий <span
+                                    class="highlighting">push
+                                    origin</span>
+                            </li>
 
-                                <span class="bold">6.</span> Отправляем изменения в удаленный репозиторий <span class="highlighting">"push
-                                    origin"</span><br>
+                            <li>
+                                <span class="number">7.1</span> Переключаемся в ветку master (для выкладки на боевой
+                                сервер) <span class="highlighting">checkout</span>
+                            </li>
 
-                                <span class="bold">7.1</span> Переключаемся в ветку master (для выкладки на боевой сервер) <span
-                                    class="highlighting">"checkout"</span><br>
-
-                                <span class="bold">7.2</span> ИЛИ переключаемся в ветку dev (общая ветка разработчиков и тестировщиков,
+                            <li>
+                                <span class="number">7.2</span> ИЛИ переключаемся в ветку dev (общая ветка разработчиков и
+                                тестировщиков,
                                 именно в нее добавляются все новые разработки перед очередным релизом) <span
-                                    class="highlighting">"checkout"</span><br>
+                                    class="highlighting">checkout</span>
+                            </li>
 
-                                <span class="bold">8.</span> Подтягиваем изменения из удаленного репозитория <span
-                                    class="highlighting">"pull origin"</span><br>
+                            <li>
+                                <span class="number">8.</span> Подтягиваем изменения из удаленного репозитория <span
+                                    class="highlighting">pull origin</span>
+                            </li>
 
-                                <span class="bold">9.</span> Вливаем измения (сливаем ветки) из удаленной ветки (в которой работали ранее)
-                                в master ИЛИ в dev <span class="highlighting">"merge"</span><br>
+                            <li>
+                                <span class="number">9.</span> Вливаем измения (сливаем ветки) из удаленной ветки (в
+                                которой работали ранее)
+                                в master ИЛИ в dev <span class="highlighting">merge</span>
+                            </li>
 
-                                <span class="bold">10.</span> Отправляем изменения на удаленный репозиторий - уже из master (для обнавлений
-                                на боевом сервере) ИЛИ из Dev <span class="highlighting">"push"</span>
+                            <li>
+                                <span class="number">10.</span> Отправляем изменения на удаленный репозиторий - уже из
+                                master (для обнавлений
+                                на боевом сервере) ИЛИ из Dev <span class="highlighting">push</span>
+                            </li>
+                        </ul>
+
+                        <div class="delimiter"></div>
+
+                        <h2>Полезные ссылки:</h2>
+                        <ul class="mainList">
+                            <li>
+                                <a class="mainList__link" href="https://swods.ru/shpargalka-po-git-osnovnye-komandy-sliyanie-vetok-vypiska-vetok-s-github/" target="_blank">шпаргалка по Git</a>
+                                <p class="mainList__explanation">
+                                    Удобная шпаргалка по Git — основные команды, слияние веток, выписка веток с github
+                                </p>
                             </li>
                         </ul>
 
