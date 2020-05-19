@@ -39,7 +39,6 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: #333;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   background-color: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
@@ -80,8 +79,14 @@ body {
   height: 1px;
   background-color: #d4d4d4; }
 
+.mb-10 {
+  margin-bottom: 10px !important; }
+
 .mb-20 {
-  margin-bottom: 20px; }
+  margin-bottom: 20px !important; }
+
+.pl-20 {
+  padding-left: 20px !important; }
 
 .mainContent {
   -webkit-box-flex: 1;
@@ -94,7 +99,6 @@ body {
       font-size: 38px;
       line-height: 42px;
       color: #3b96e4;
-      font-family: Arial, Helvetica, sans-serif;
       font-weight: 600;
       font-family: 'Futura', Arial, Helvetica, sans-serif;
       text-transform: uppercase;
@@ -114,7 +118,6 @@ body {
       font-size: 26px;
       line-height: 28px;
       color: #3b96e4;
-      font-family: Arial, Helvetica, sans-serif;
       font-weight: 600;
       font-family: 'Futura', Arial, Helvetica, sans-serif;
       margin: 30px 0 10px; }
@@ -124,11 +127,24 @@ body {
       .mainContent__info h2::selection {
         color: #ff0;
         background: #364f63; }
+    .mainContent__info .moreLink {
+      position: relative;
+      font-size: 16px;
+      line-height: 26px;
+      color: #b3b3b3;
+      font-weight: 400; }
+      .mainContent__info .moreLink::after {
+        content: "подробно";
+        position: absolute;
+        left: 6px;
+        bottom: 10px;
+        text-decoration: underline; }
+      .mainContent__info .moreLink:hover {
+        color: #9a9a9a; }
     .mainContent__info h3 {
       font-size: 24px;
       line-height: 26px;
       color: #3b96e4;
-      font-family: Arial, Helvetica, sans-serif;
       font-weight: 500;
       font-family: 'Futura', Arial, Helvetica, sans-serif;
       margin: 20px 0 10px; }
@@ -143,7 +159,6 @@ body {
       font-size: 14px;
       line-height: 24px;
       color: #333;
-      font-family: Arial, Helvetica, sans-serif;
       font-weight: 500; }
 
 .navbar {
@@ -156,7 +171,6 @@ body {
     font-size: 14px;
     line-height: 24px;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px; }
@@ -186,7 +200,6 @@ body {
     font-size: 20px;
     line-height: 24px;
     color: #1496e2;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     display: inline-block;
     color: #1496e2;
@@ -241,9 +254,8 @@ footer {
     font-size: 16px;
     line-height: 20px;
     color: #c7254e;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
-    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-family: Courier New;
     display: block;
     background: #fff;
     border: solid 1px #e2e2e2;
@@ -263,13 +275,19 @@ footer {
       color: #7d7d7d; }
   .listCode .highlighting {
     color: #099800; }
+  .listCode .highlightingTwo {
+    color: #ffffff;
+    background-color: #506b80;
+    font-family: 'Futura', Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    padding: 0 3px; }
   .listCode .highlightCode {
-    color: #c7254e; }
+    color: #c7254e;
+    font-family: Courier New; }
   .listCode__explanation {
     font-size: 13px;
     line-height: 16px;
     color: #333;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 500; }
 
 @media screen and (max-width: 480px) {

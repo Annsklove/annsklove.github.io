@@ -82,8 +82,14 @@ body {
     background-color: $delimiterColor;
 }
 
+.mb-10 {
+    margin-bottom: 10px !important;
+}
 .mb-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+}
+.pl-20 {
+    padding-left: 20px !important;
 }
 
 .mainContent {
@@ -113,6 +119,21 @@ body {
             &::selection {
                 color: #ff0;
                 background: #364f63;
+            }
+        }
+
+        .moreLink {
+            position: relative;
+            @include mainFont ($size: 16px, $lineHt: 26px, $color: #b3b3b3, $fWeight: 400);
+            &::after {
+                content: "подробно";
+                position: absolute;
+                left: 6px;
+                bottom: 10px;
+                text-decoration: underline;
+            }
+            &:hover {
+                color: darken($color: #b3b3b3, $amount: 10);
             }
         }
 

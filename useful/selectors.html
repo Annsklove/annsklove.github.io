@@ -156,6 +156,9 @@
 
                     <h3>Псевдо-классы - общие</h3>
                     <ul class="listCode min-margin">
+                        <li class="highlightBlock pl-20">
+                            <b>Псевдоклассы</b> – это селекторы, которые определяют состояние уже существующих элементов, которое может меняться при определенных условиях.
+                        </li>
                         <li>
                             <span class="highlightCode bold">:first-child</span>
                             &#8594; первый дочерний элемент
@@ -209,6 +212,10 @@
                             <span class="highlightCode bold">:not(selector) </span>
                             &#8594; элементы, которые НЕ содержат заданный селектор (все, КРОМЕ заданного типа). Например: div:not(.myClass) - не содержат класс .myClass
                         </li>
+                        <li>
+                            <span class="highlightCode bold">::lang(ru)</span>
+                            &#8594; стили в зависимости от языка. например, для задания разных стилей кавычек в цитатах
+                        </li>
                     </ul>
 
                     <div class="delimiter mb-20"></div>
@@ -253,6 +260,10 @@
                             &#8594; содержание не прошло проверку (не валидно)
                         </li>
                         <li>
+                            <span class="highlightCode bold">::required</span>
+                            &#8594; элементы, у которых задан атрибут required (который указывает, что пользователь обязательно должен выбрать/добавить значение перед отправкой формы)
+                        </li>
+                        <li>
                             <span class="highlightCode bold">:disabled</span>
                             &#8594; заблокированное поле (не доступный элемент формы)
                         </li>
@@ -281,35 +292,39 @@
                     <div class="delimiter mb-20"></div>
 
                     <h3>Псевдо-элементы</h3>
-
                     <ul class="listCode min-margin">
+                        <li class="highlightBlock pl-20">
+                            <b>Псевдоэлементы</b> – это селекторы, которые определяют область элементов, которая изначально отсутствует в дереве документа. Эта область создается искусственно с помощью CSS.
+                        </li>
                         <li>
                             <span class="highlightCode bold">::before</span>
                             &#8594; добавить содержимое в начало
                         </li>
                         <li>
                             <span class="highlightCode bold">::after</span>
-                            &#8594; добавить содержимое в конец
+                            &#8594; добавить содержимое в конец<br>
                         </li>
+                        <li class="highlightBlock pl-20">
+                            С помощью <b>before</b> и <b>after</b>, можно сделать:<br> маркеры у списков; символы для "хлебных крошек"; особые ковычки в тексте; подложка у блока (бэграунд, изображение, какие-то картинки смещенные по странице..); наведение на какой-то блок (появление текста, картинки или наложение цвета)
+                        </li>
+
                         <li>
-                            <span class="highlightCode bold">:first-letter</span>
+                            <span class="highlightCode bold">::first-letter</span>
                             &#8594; стили для первой буквы
                         </li>
                         <li>
-                            <span class="highlightCode bold">:first-line</span>
+                            <span class="highlightCode bold">::first-line</span>
                             &#8594; стили для первой строки
-                        </li>
-                        <li>
-                            <span class="highlightCode bold">:lang(ru)</span>
-                            &#8594; стили в зависимости от языка. например, для задания разных стилей кавычек в цитатах
                         </li>
                         <li>
                             <span class="highlightCode bold">:hover::before</span>
                             &#8594; псевдоэллемент при наведении
                         </li>
+                        <li>
+                            <span class="highlightCode bold">::selection</span>
+                            &#8594; стили к контенту, выделенному мышкой
+                        </li>
                     </ul>
-
-
 
                     <div class="delimiter mb-20"></div>
 

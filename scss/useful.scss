@@ -28,7 +28,7 @@
 
     code {
         @include mainFont ($size: 16px, $lineHt: 20px, $color: $codeTextColor, $fWeight: 500);
-        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+        font-family: Courier New;
         display: block;
         background: $codeBgColor;
         border: solid 1px $codeBrdColor;
@@ -54,8 +54,17 @@
         color: $highlightingColor;
     }
 
+    .highlightingTwo {
+        color: #ffffff;
+        background-color: $highlightingBg2;
+        font-family: 'Futura', Arial, Helvetica, sans-serif;
+        font-size: 1.2em;
+        padding: 0 3px;
+    }
+
     .highlightCode {
         color: $codeTextColor;
+        font-family: Courier New;
     }
 
     &__explanation {
