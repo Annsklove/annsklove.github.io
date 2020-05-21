@@ -6,94 +6,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- bootstrap-3.3.7 -->
-    <link rel="stylesheet" href="vendors/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/vendors/bootstrap-3.3.7/css/bootstrap.min.css">
     <!-- bootstrap font-awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- Мои стили-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
     <!-- Дефолтный сброс стилей -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- brjyrb - font-awesome-->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <!-- иконки - font-awesome-->
+    <link rel="stylesheet" href="src/vendors/font-awesome/css/font-awesome.min.css">
 
-    <title>Анна - задания GeekBrains</title>
+    <title>Анна - всякие полезности</title>
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
-            </div>
+    <header>
+        <nav class="navbar">
+            <div class="container">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active">
-                        <a href="index.html">GeekBrains <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="useful.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                            aria-haspopup="true" aria-expanded="false">Полезности <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="useful.html">Все полезности</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="useful/git.html">Git</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="index.html">Главная <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="useful.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Полезности <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="html-css/display.html">Display</a></li>
+                                <li><a href="html-css/display.html">Selectors</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="other/git.html">Git</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="mainContent">
         <div class="container">
             <div class="mainContent__info row">
                 <div class="col-md-12">
                     <div class="title">
-                        <h1>Задания для GeekBrains:</h1>
+                        <h1>Всякие полезности &#58;&#41;</h1>
                     </div>
 
                     <div>
                         <ul class="mainList">
                             <li>
-                                <a class="mainList__link" href="les1-simple-psd/index.html">Макет: simple-psd</a>
+                                <a class="mainList__link" href="html-css/display.html">display</a>
                                 <p class="mainList__explanation">
-                                    Вебинарный курс HTML5 и CSS3. Задание для 1,2 и 3 уроков.<br>
-                                    - простоый адаптивный макет
-                                    (без bootstrap), <br>
-                                    - видео-бэграунд, встроенное видео в макет
+                                    flex, flout, grid
+                                    <br><span class="highlightText">не полно!</span>
                                 </p>
                             </li>
+
                             <li>
-                                <a class="mainList__link" href="form/signup.html">Форма</a>
+                                <a class="mainList__link" href="other/git.html">git</a>
                                 <p class="mainList__explanation">
-                                    Вебинарный курс HTML5 и CSS3. Задание для 3 урока.<br>
-                                    Форма (на примере формы регистрации)
+                                    подсказки по git, основные команды
+                                    <br><span class="highlightText">можно дополнить</span>
                                 </p>
                             </li>
+
                             <li>
-                                <a class="mainList__link" href="interior-home/index.html">Макет: interior-home</a>
+                                <a class="mainList__link" href="html-css/selectors.html">cелекторы, псевдоклассы</a>
                                 <p class="mainList__explanation">
-                                    Интерактивный курс HTML5 и CSS3. Адаптивная верстка макета "interior-home" (с
-                                    использованием bootstrap)
+                                    Селекторы CSS, псевдоклассы, псевдоэлементы
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="#">CSS3</a>
+                                <p class="mainList__explanation">
+                                    CSS3 - плюшки, особенности, интересные вещи
+                                    <br><span class="highlightText">не сделано!</span>
+                                    <br><span class="highlightText">добавить про свойство mix-blend-mode</span>
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="#">scss, БЭМ</a>
+                                <p class="mainList__explanation">
+                                    подсказки по scss и по БЭМ
+                                    <br><span class="highlightText">не сделано!</span>
+                                </p>
+                            </li>
+
+                            <!-- <li>
+                                <a class="mainList__link" href="#">patterns</a>
+                                <p class="mainList__explanation">
+                                    регулярные выражения, примеры, разбор
+                                </p>
+                            </li> -->
+
+                            <!-- <li>
+                                <a class="mainList__link" href="#">email table</a>
+                                <p class="mainList__explanation">
+                                    табличная верстка для email, основные принципы email
+                                </p>
+                            </li> -->
+                        </ul>
+
+                        <div class="delimiter"></div>
+
+                        <h2>Полезные ссылки для верстки:</h2>
+                        <ul class="mainList">
+                            <li>
+                                <a class="mainList__link" href="https://caniuse.com/" target="_blank">caniuse</a>
+                                <p class="mainList__explanation">
+                                    поддержка браузерами веб-технологий
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://validator.w3.org/"
+                                    target="_blank">validator.w3</a>
+                                <p class="mainList__explanation">
+                                    Валидатор для HTML
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://www.artlebedev.ru/typograf/"
+                                    target="_blank">typograf-1</a>, <a class="mainList__link"
+                                    href="http://www.typograf.ru/" target="_blank">typograf-2</a>
+                                <p class="mainList__explanation">
+                                    Типограф от Лебедева и еще один хороший типограф (озможно, даже лучше!)
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="http://konstantinbulgakov.com/tools/symbols"
+                                    target="_blank">Спецсимволы HTML</a>
+                                <p class="mainList__explanation">
+                                    Полный список спецсимволов HTML
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://tinypng.com/" target="_blank">tinypng.com</a>,
+                                <a class="mainList__link" href="https://www.iloveimg.com/ru/compress-image"
+                                    target="_blank">iloveimg.com</a>
+                                <p class="mainList__explanation">
+                                    Сжатие и оптимизация картинок png, jpeg, gif
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://fontawesome.com/icons?d=gallery&m=free"
+                                    target="_blank">fontawesome</a>, <a class="mainList__link"
+                                    href="https://moonback.ru/page/install-awesome" target="_blank">install-awesome</a>
+                                <p class="mainList__explanation">
+                                    Иконки - fontawesome и инструкция подключения
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://autoprefixer.github.io/ru/"
+                                    target="_blank">autoprefixer</a>
+                                <p class="mainList__explanation">
+                                    Автопрефиксер CSS - для расстановки вендорных префиксов для лучшей кроссбраузерности
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://tpverstak.ru/common-css-class-names/"
+                                    target="_blank">css class names</a>
+                                <p class="mainList__explanation">
+                                    Список популярных названий классов HTML/CSS
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="http://www.pcre.ru/docs/perl/text/intro/"
+                                    target="_blank">регулярки</a>,
+                                <a class="mainList__link" href="https://regex101.com/" target="_blank">regex101</a>
+                                <p class="mainList__explanation">
+                                    Регулярные выражения и сайт для тестирование регулярных выражений
+                                </p>
+                            </li>
+                        </ul>
+
+                        <div class="delimiter"></div>
+
+                        <h2>Разные ссылочки с документашками и подсказками:</h2>
+
+                        <ul class="mainList">
+                            <li>
+                                <a class="mainList__link" href="http://fls.guru/" target="_blank">fls.guru</a>
+                                <p class="mainList__explanation">
+                                    Много хороших и наглядных подсказок с примерами ("ФРИЛАНСЕР ПО ЖИЗНИ")
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="http://shpargalkablog.ru/p/html-css-javascript.html"
+                                    target="_blank">html-css-javascript</a>
+                                <p class="mainList__explanation">
+                                    Много документации по html, css, javascript, php
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="http://beloweb.ru/category/vyorstka"
+                                    target="_blank">beloweb.ru</a>
+                                <p class="mainList__explanation">
+                                    Хороший сайт по верстке (примеры, разборы), по дизайну, JS, полезные ссылки и многое
+                                    другое.
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://habr.com/ru/post/250621/" target="_blank">useful
+                                    links free</a>
+                                <p class="mainList__explanation">
+                                    300 ползеных бесплатных сервисов
+                                </p>
+                            </li>
+                        </ul>
+
+                        <h2>Мои полезности и хаки:</h2>
+                        <ul class="mainList">
+                            <li>
+                                <p class="mainList__subTitle">
+                                    Верстка текста</p>
+                                <p class="mainList__explanation">
+                                    Много полезной информации для верстки текста (См. урок 5: HTML, HTML5, CSS, CSS3 -> Вебинар -> 5 less).<br>
+                                    особенно полезно для верстки журналов, блогов.. Автоматическое создание колонок, адаптивное распределение текста по колонкам и многое другое
+                                </p>
+                            </li>
+                        </ul>
+
+                        <h2>Полезные и интересные плагины:</h2>
+
+                        <ul class="mainList">
+                            <li>
+                                <a class="mainList__link"
+                                    href="https://sergeychunkevich.com/animaciya-elementa-pri-skrollinge-kombinaciya-animate-css-wow-js/"
+                                    target="_blank">animate.css и wow.js</a>,
+                                <a class="mainList__link" href="https://animate.style/" target="_blank">animate</a>
+                                <p class="mainList__explanation">
+                                    Анимация элемента при скроллинге | Комбинация animate.css и wow.js (с примерами и
+                                    настройками)
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="http://www.magisters.org/community/4/18/"
+                                    target="_blank">настройки</a>,
+                                <a class="mainList__link" href="https://github.com/metafizzy/flickity"
+                                    target="_blank">flickity на github</a>,
+                                <a class="mainList__link" href="http://flickity.metafizzy.co/"
+                                    target="_blank">flickity</a>
+                                <p class="mainList__explanation">
+                                    Слайдер Flickity JS - описание, принцип работы, примеры, настройки
+                                </p>
+                            </li>
+
+                            <li>
+                                <a class="mainList__link" href="https://myrusakov.ru/slick-slider-jquery.html"
+                                    target="_blank">slick-slider</a>
+                                <p class="mainList__explanation">
+                                    Слайдер Slick - настройки
                                 </p>
                             </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
+
     </main>
 
     <footer>
@@ -107,15 +306,14 @@
                     </address>
                     <div class="contacts__info">
                         <p>Анна Скурская</p>
-                    <div>
+                        <div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
     </footer>
 
-
-    <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-    <script src="vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="src/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="src/vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>

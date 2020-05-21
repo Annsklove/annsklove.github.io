@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap-3.3.7 -->
+    <link rel="stylesheet" href="../src/vendors/bootstrap-3.3.7/css/bootstrap.min.css">
+    <!-- bootstrap font-awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Мои стили-->
+    <link rel="stylesheet" href="../src/css/style.css">
+    <!-- Дефолтный сброс стилей -->
+    <link rel="stylesheet" href="../src/css/normalize.css">
+    <!-- иконки - font-awesome-->
+    <link rel="stylesheet" href="../src/vendors/font-awesome/css/font-awesome.min.css">
+
+    <title>Git-подсказки</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="../index.html">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../useful.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">Полезности <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../html-css/display.html">Display</a></li>
+                            <li><a href="../html-css/display.html">Selectors</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="../other/git.html">Git</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="mainContent">
+        <div class="container">
+            <div class="mainContent__info row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h1>GIT - подсказки, документашки</h1>
+
+                        <h2>Основные команды:</h2>
+
+                        <ul class="listCode">
+                            <li>
+                                <code>
+                                    > git clone <span class="example">git@github.com:....git ./</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Клонирование репозитория с github.<br>
+                                    <span class="highlighting">«./»</span> означает, что создать репозиторий нужно в
+                                    текущей директории.
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git init
+                                </code>
+                                <p class="listCode__explanation">
+                                    Создание (инициализация) нового репозитория в текущей директории
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git pull<br>
+                                    > git pull origin <span class="example">newBranch</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Вливание изменений из удаленного репозитория в локальный.<br>
+                                    Влить изменения из определенной удаленной ветки (в примере - из ветки newBranch)
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git branch <br>
+                                    > git branch <span class="example">newBranch</span><br>
+                                    > git branch -d <span class="example">newBranch</span><br>
+                                </code>
+                                <p class="listCode__explanation">
+                                    <span class="highlighting">"git branch"</span> - просмотр информации о ветках,
+                                    список веток влокальном репозитории (текущая ветка будет помечена звездочкой). <br>
+                                    Создание новой ветки с указанным именем (в примере - создание ветки newBranch). <br>
+                                    Удаление указанной ветки <span class="highlighting">-d</span>.
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git checkout <span class="example">newBranch</span><br>
+                                    > git checkout -b <span class="example">newBranch</span><br>
+                                    > git checkout --track origin/<span class="example">branchAnn</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Переключение на указанную ветку (в примере - на ветку newBranch).<br>
+                                    Создание новой ветки и переключение к ней (git checkout <span
+                                        class="highlighting"></span>-b</span>).<br>
+                                    Выписать (получить) уже существующую ветку с github (из удаленного репозитория), в
+                                    примере - получение ветки branchAnn.
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git remote update
+                                </code>
+                                <p class="listCode__explanation">
+                                    Выполнить обновление. Если команда <span class="highlighting">git checkout --track
+                                        origin/..</span> не сработала, нужно попробовать выполнить обновление.
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git add . <br>
+                                    > git add <span class="example">styles/</span><br>
+                                    > git add <span class="example">index.html</span> <span
+                                        class="example">footer.php</span> <span class="example">header.php
+                                        ...</span><br>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Фиксирование изменений файлов, которые будут добавлены в коммит.<br>
+                                    Можно добавить все файлы сразу <span class="highlighting">"."</span>, отдельные
+                                    каталоги со всем содержимом (в примере - styles/) или отдельные файлы (index.html,
+                                    footer.php ... - <span class="highlighting">через пробел</span>)
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git rm <span class="example">index.html</span> <span
+                                        class="example">footer.php</span> header.php ...</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Удаление файлов
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git commit -m <span class="example">"новый коммит"</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Создание нового коммита (сохранение изменений указанных в git add)
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git push<br>
+                                    > git push origin <span class="example">newBranch</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Вливание локальных изменений в удаленный репозиторий (если в master - не нужно
+                                    писать "origin master").<br>
+                                    Если находимся не в master - указываем удаленную ветку (в примере - origin
+                                    newBranch)
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git merge <span class="example">newBranch</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Слияние указанной ветки (в примере - ветки newBranch) в текущую (в которой, сейчас
+                                    находимся)
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git status
+                                </code>
+                                <p class="listCode__explanation">
+                                    Информаци о текущем состоянии файлов репозитория. Список измененных и не добавленных
+                                    файлов.
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git log
+                                </code>
+                                <p class="listCode__explanation">
+                                    История коммитов репозитория с их комментариями и авторами
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git giff
+                                </code>
+                                <p class="listCode__explanation">
+                                    Подробный просмотр незафиксированных изменений в файлах
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git cherry-pick <span class="example">300b9d9f2</span>
+                                </code>
+                                <p class="listCode__explanation">
+                                    Копирование одного коммита (в примере - 300b9d9f2) из другой ветки в текущую (будет
+                                    создан новый коммит в конце цепочки).
+                                </p>
+                            </li>
+
+                            <li>
+                                <code>
+                                    > git rebase
+                                    <p class="textExample">пример:</p>
+                                    > git checkout <span class="example">newBranch</span><br>
+                                    > git rebase master
+                                </code>
+                                <p class="listCode__explanation">
+                                    Применение цепочки новых коммитов из указанной ветки в активную / текущую (в примере
+                                    из master – в newBranch)
+                                </p>
+                            </li>
+
+                        </ul>
+
+                        <div class="delimiter"></div>
+
+                        <h2>Краткий ход действий:</h2>
+                        <ul class="listCode min-margin">
+                            <li>
+                                <span class="number">1.</span> Клонируем репозиторий <span
+                                    class="highlighting">clone</span>
+                            </li>
+                            <li>
+                                <span class="number">2.1</span> Получаем удаленные ветку/ветки <span
+                                    class="highlighting">checkout --track
+                                    origin/</span> (если это нужно и они уже существуют) и подтягиваем в неё изменения
+                                из удаленного репозитория <span class="highlighting">pull origin</span>
+                            </li>
+
+                            <li>
+                                <span class="number">2.2</span> ИЛИ создаем новую локальную ветку <span
+                                    class="highlighting">checkout
+                                    -b</span> (если такая ветка существует, то вливаем в неё изменения из удаленного
+                                репозитория) <span class="highlighting">pull origin</span>
+                            </li>
+
+                            <li>
+                                <span class="number">3.1</span> Смотрим список изменений и зафиксированных /
+                                незафиксированных файлов <span class="highlighting">status</span>
+                            </li>
+
+                            <li>
+                                <span class="number">3.2</span> Поработав в ветке - фиксируем изменения <span
+                                    class="highlighting">add</span>
+                            </li>
+
+                            <li><span class="number">4.</span> Коммитим изменения <span class="highlighting">commit
+                                    -m</span></li>
+
+                            <li>
+                                <span class="number">5.</span> Вливаем в нашу ветку изменения из master И из ветки dev
+                                (ветка разработчиков,
+                                если такая есть)<span class="highlighting">pull origin</span>
+                            </li>
+
+                            <li>
+                                <span class="number">6.</span> Отправляем изменения в удаленный репозиторий <span
+                                    class="highlighting">push
+                                    origin</span>
+                            </li>
+
+                            <li>
+                                <span class="number">7.1</span> Переключаемся в ветку master (для выкладки на боевой
+                                сервер) <span class="highlighting">checkout</span>
+                            </li>
+
+                            <li>
+                                <span class="number">7.2</span> ИЛИ переключаемся в ветку dev (общая ветка разработчиков и
+                                тестировщиков,
+                                именно в нее добавляются все новые разработки перед очередным релизом) <span
+                                    class="highlighting">checkout</span>
+                            </li>
+
+                            <li>
+                                <span class="number">8.</span> Подтягиваем изменения из удаленного репозитория <span
+                                    class="highlighting">pull origin</span>
+                            </li>
+
+                            <li>
+                                <span class="number">9.</span> Вливаем измения (сливаем ветки) из удаленной ветки (в
+                                которой работали ранее)
+                                в master ИЛИ в dev <span class="highlighting">merge</span>
+                            </li>
+
+                            <li>
+                                <span class="number">10.</span> Отправляем изменения на удаленный репозиторий - уже из
+                                master (для обнавлений
+                                на боевом сервере) ИЛИ из Dev <span class="highlighting">push</span>
+                            </li>
+                        </ul>
+
+                        <div class="delimiter"></div>
+
+                        <h2>Полезные ссылки:</h2>
+                        <ul class="mainList">
+                            <li>
+                                <a class="mainList__link" href="https://swods.ru/shpargalka-po-git-osnovnye-komandy-sliyanie-vetok-vypiska-vetok-s-github/" target="_blank">шпаргалка по Git</a>
+                                <p class="mainList__explanation">
+                                    Удобная шпаргалка по Git — основные команды, слияние веток, выписка веток с github
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contacts row">
+                <div class="col-md-12">
+                    <address class="contacts__socialIcons">
+                        <a target="_blank" title="github" href="https://github.com/Annsklove">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    </address>
+                    <div class="contacts__info">
+                        <p>Анна Скурская</p>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+    </footer>
+
+    <script src="../src/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../src/vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
