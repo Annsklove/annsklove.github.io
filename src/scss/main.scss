@@ -76,6 +76,10 @@ body {
     font-weight: 600;
 }
 
+.delimiterDiv {
+    border-bottom: solid 1px $delimiterColor;
+}
+
 .delimiter {
     width: 100%;
     height: 1px;
