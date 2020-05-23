@@ -1,333 +1,364 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE HTML>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Портфолио: Web-разработчик</title>
 
-    <!-- bootstrap-3.3.7 -->
-    <link rel="stylesheet" href="src/vendors/bootstrap-3.3.7/css/bootstrap.min.css">
-    <!-- bootstrap font-awesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
 
-    <!-- Мои стили-->
-    <link rel="stylesheet" href="src/css/style.css">
-    <!-- Дефолтный сброс стилей -->
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <!-- иконки - font-awesome-->
-    <link rel="stylesheet" href="src/vendors/font-awesome/css/font-awesome.min.css">
-
-    <title>Анна - всякие полезности</title>
+  <!-- Styles -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Montserrat:400,500,700|Playfair+Display:400,400i,700,700i&amp;subset=cyrillic"
+    rel="stylesheet">
+  <link href="src/styles/style.css" rel="stylesheet" media="screen">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
+  <div>
 
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Brand</a>
-                </div>
+    <!-- Header -->
+    <header class="navbar navbar-mobile md-hide">
+      <a href="#" class="brand js-target-scroll">
+        Анна Скурская
+      </a>
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active">
-                            <a href="index.html">Главная <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="useful.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false">Полезности <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="html-css/display.html">Display</a></li>
-                                <li><a href="html-css/display.html">Selectors</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="other/git.html">Git</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <!-- Navbar Collapse -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <ul class="social-list">
+        <li><a href="https://www.facebook.com/annsklove" target="_blank" class="fa fa-facebook"></a></li>
+        <li><a href="https://github.com/Annsklove" target="_blank" class="fa fa-github"></a></li>
+        <li><a href="skype:live:entropia13_1?add" target="_blank" class="fa fa-skype"></a></li>
+        <li><a href="https://www.linkedin.com/in/anna-bodrova/" target="_blank" class="fa fa-linkedin"></a></li>
+      </ul>
+
+      <!-- Navigation Mobile -->
+      <nav class="nav-mobile">
+        <div class="collapse navbar-collapse" id="nav-collapse">
+          <ul class="nav-mobile-list">
+            <li class="active">
+              <a href="#">Главная</a>
+            </li>
+            <li class="">
+              <a href="#aboutMe">Обо мне</a>
+            </li>
+            <li class="">
+              <a href="#">Резюме</a>
+            </li>
+            <li class="">
+              <a href="#">Портфолио</a>
+            </li>
+            <li class="">
+              <a href="#">Блог</a>
+            </li>
+            <li class="">
+              <a href="#contactsMe">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <main class="mainContent">
-        <div class="container">
-            <div class="mainContent__info row">
-                <div class="col-md-12">
-                    <div class="title">
-                        <h1>Всякие полезности &#58;&#41;</h1>
-                    </div>
+    <header class="visible-md visible-lg navbar-left">
+      <div class="brand-panel">
+        <a href="#" class="brand js-target-scroll">
+          <div class="myphoto"></div>
+          Анна Скурская
+        </a>
+      </div>
 
-                    <div>
-                        <!-- Мои документации -->
-                        <div class="delimiterDiv">
-                            <h2>Мои документации:</h2>
-                            <ul class="mainList">
-                                <li>
-                                    <a class="mainList__link" href="html-css/display.html">display</a>
-                                    <p class="mainList__explanation">
-                                        flex, flout, grid
-                                        <br><span class="highlightText">не полно!</span>
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="other/git.html">git</a>
-                                    <p class="mainList__explanation">
-                                        подсказки по git, основные команды
-                                        <br><span class="highlightText">можно дополнить</span>
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="html-css/selectors.html">cелекторы, псевдоклассы</a>
-                                    <p class="mainList__explanation">
-                                        Селекторы CSS, псевдоклассы, псевдоэлементы
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="#">CSS3</a>
-                                    <p class="mainList__explanation">
-                                        CSS3 - плюшки, особенности, интересные вещи
-                                        <br><span class="highlightText">не сделано!</span>
-                                        <br><span class="highlightText">добавить про свойство mix-blend-mode</span>
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="#">scss, БЭМ</a>
-                                    <p class="mainList__explanation">
-                                        подсказки по scss и по БЭМ
-                                        <br><span class="highlightText">не сделано!</span>
-                                    </p>
-                                    <a class="mainList__link" href="https://sass-scss.ru/documentation/" target="_blank">SAAS документация</a>
-                                    <p class="mainList__explanation">
-                                        русская документация
-                                    </p>
-                                </li>
-    
-                                <!-- <li>
-                                    <a class="mainList__link" href="#">patterns</a>
-                                    <p class="mainList__explanation">
-                                        регулярные выражения, примеры, разбор
-                                    </p>
-                                </li> -->
-    
-                                <!-- <li>
-                                    <a class="mainList__link" href="#">email table</a>
-                                    <p class="mainList__explanation">
-                                        табличная верстка для email, основные принципы email
-                                    </p>
-                                </li> -->
-                            </ul>
-                        </div>
+      <!-- Navigation left -->
+      <nav class="nav-left hidden-xs hidden-sm">
+        <ul class="nav-left-list">
+          <li class="active">
+            <a href="#">Главная</a>
+          </li>
+          <li class="">
+            <a href="#aboutMe">Обо мне</a>
+          </li>
+          <li class="">
+            <a href="#">Резюме</a>
+          </li>
+          <li class="">
+            <a href="#">Портфолио</a>
+          </li>
+          <li class="">
+            <a href="#">Блог</a>
+          </li>
+          <li class="">
+            <a href="#contactsMe">Контакты</a>
+          </li>
+        </ul>
+      </nav>
 
-                        <!-- Полезные ссылки для верстки -->
-                        <div class="delimiterDiv">
-                            <h2>Полезные ссылки для верстки:</h2>
-                            <ul class="mainList">
-                                <li>
-                                    <a class="mainList__link" href="https://caniuse.com/" target="_blank">caniuse</a>
-                                    <p class="mainList__explanation">
-                                        поддержка браузерами веб-технологий
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://validator.w3.org/"
-                                        target="_blank">validator.w3</a>
-                                    <p class="mainList__explanation">
-                                        Валидатор для HTML
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://www.artlebedev.ru/typograf/"
-                                        target="_blank">typograf-1</a>, <a class="mainList__link"
-                                        href="http://www.typograf.ru/" target="_blank">typograf-2</a>
-                                    <p class="mainList__explanation">
-                                        Типограф от Лебедева и еще один хороший типограф (озможно, даже лучше!)
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="http://konstantinbulgakov.com/tools/symbols"
-                                        target="_blank">Спецсимволы HTML</a>
-                                    <p class="mainList__explanation">
-                                        Полный список спецсимволов HTML
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://tinypng.com/" target="_blank">tinypng.com</a>,
-                                    <a class="mainList__link" href="https://www.iloveimg.com/ru/compress-image"
-                                        target="_blank">iloveimg.com</a>
-                                    <p class="mainList__explanation">
-                                        Сжатие и оптимизация картинок png, jpeg, gif
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://fontawesome.com/icons?d=gallery&m=free"
-                                        target="_blank">fontawesome</a>, <a class="mainList__link"
-                                        href="https://moonback.ru/page/install-awesome" target="_blank">install-awesome</a>
-                                    <p class="mainList__explanation">
-                                        Иконки - fontawesome и инструкция подключения
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://autoprefixer.github.io/ru/"
-                                        target="_blank">autoprefixer</a>
-                                    <p class="mainList__explanation">
-                                        Автопрефиксер CSS - для расстановки вендорных префиксов для лучшей кроссбраузерности
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://tpverstak.ru/common-css-class-names/"
-                                        target="_blank">css class names</a>
-                                    <p class="mainList__explanation">
-                                        Список популярных названий классов HTML/CSS
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="http://www.pcre.ru/docs/perl/text/intro/"
-                                        target="_blank">регулярки</a>,
-                                    <a class="mainList__link" href="https://regex101.com/" target="_blank">regex101</a>
-                                    <p class="mainList__explanation">
-                                        Регулярные выражения и сайт для тестирование регулярных выражений
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
+      <div class="address-panel hidden-xs hidden-sm">
+        <address><a href="tel:+79308341346">+7 930 834 13 46</a></address>
+        <address><a href="mailto:annsklove@gmail.com">annsklove@gmail.com</a></address>
+      </div>
+      <ul class="social-list">
+        <li><a href="https://www.facebook.com/annsklove" target="_blank" class="fa fa-facebook"></a></li>
+        <li><a href="https://github.com/Annsklove" target="_blank" class="fa fa-github"></a></li>
+        <li><a href="skype:live:entropia13_1?add" target="_blank" class="fa fa-skype"></a></li>
+        <li><a href="https://www.linkedin.com/in/anna-bodrova/" target="_blank" class="fa fa-linkedin"></a></li>
+      </ul>
+    </header>
 
-                        <!-- Полезные ссылки -->
-                        <div class="delimiterDiv">
-                            <h2>Полезные ссылки</h2>
-                            <ul class="mainList">
-                                <li>
-                                    <a class="mainList__link" href="http://fls.guru/" target="_blank">fls.guru</a>
-                                    <p class="mainList__explanation">
-                                        Много хороших и наглядных подсказок с примерами ("ФРИЛАНСЕР ПО ЖИЗНИ")
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="http://shpargalkablog.ru/p/html-css-javascript.html"
-                                        target="_blank">html-css-javascript</a>
-                                    <p class="mainList__explanation">
-                                        Много документации по html, css, javascript, php
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="http://beloweb.ru/category/vyorstka"
-                                        target="_blank">beloweb.ru</a>
-                                    <p class="mainList__explanation">
-                                        Хороший сайт по верстке (примеры, разборы), по дизайну, JS, полезные ссылки и многое
-                                        другое.
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://habr.com/ru/post/250621/" target="_blank">useful
-                                        links free</a>
-                                    <p class="mainList__explanation">
-                                        300 ползеных бесплатных сервисов
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
+    <!-- Home -->
 
-                        <!-- Мои полезности и хаки -->
-                        <div class="delimiterDiv">
-                            <h2>Мои полезности и хаки:</h2>
-                            <ul class="mainList">
-                                <li>
-                                    <p class="mainList__subTitle">
-                                        Верстка текста</p>
-                                    <p class="mainList__explanation">
-                                        Много полезной информации для верстки текста (См. урок 5: HTML, HTML5, CSS, CSS3 -> Вебинар -> 5 less).<br>
-                                        особенно полезно для верстки журналов, блогов.. Автоматическое создание колонок, адаптивное распределение текста по колонкам и многое другое
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Полезные и интересные плагины -->
-                        <div class="delimiterDiv">
-                            <h2>Полезные и интересные плагины:</h2>
-                            <ul class="mainList">
-                                <li>
-                                    <a class="mainList__link"
-                                        href="https://sergeychunkevich.com/animaciya-elementa-pri-skrollinge-kombinaciya-animate-css-wow-js/"
-                                        target="_blank">animate.css и wow.js</a>,
-                                    <a class="mainList__link" href="https://animate.style/" target="_blank">animate</a>
-                                    <p class="mainList__explanation">
-                                        Анимация элемента при скроллинге | Комбинация animate.css и wow.js (с примерами и
-                                        настройками)
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="http://www.magisters.org/community/4/18/"
-                                        target="_blank">настройки</a>,
-                                    <a class="mainList__link" href="https://github.com/metafizzy/flickity"
-                                        target="_blank">flickity на github</a>,
-                                    <a class="mainList__link" href="http://flickity.metafizzy.co/"
-                                        target="_blank">flickity</a>
-                                    <p class="mainList__explanation">
-                                        Слайдер Flickity JS - описание, принцип работы, примеры, настройки
-                                    </p>
-                                </li>
-    
-                                <li>
-                                    <a class="mainList__link" href="https://myrusakov.ru/slick-slider-jquery.html"
-                                        target="_blank">slick-slider</a>
-                                    <p class="mainList__explanation">
-                                        Слайдер Slick - настройки
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    <main class="main main-full main-bg jarallax" data-jarallax='{"speed": 0.6}'>
+      <div class="container-fluid">
+        <div class="opener">
+          <h1><i>Скурская Анна Денисовна</i></h1>
+          <p class="lead">Web-разработчик &amp; html - верстальщик</p>
+          <ul class="social-list">
+            <li><a href="https://www.facebook.com/annsklove" target="_blank" class="fa fa-facebook"></a></li>
+            <li><a href="https://github.com/Annsklove" target="_blank" class="fa fa-github"></a></li>
+            <li><a href="skype:live:entropia13_1?add" target="_blank" class="fa fa-skype"></a></li>
+            <li><a href="https://www.linkedin.com/in/anna-bodrova/" target="_blank" class="fa fa-linkedin"></a></li>
+          </ul>
         </div>
-
+      </div>
+      <div class="mouse-helper"></div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="contacts row">
-                <div class="col-md-12">
-                    <address class="contacts__socialIcons">
-                        <a target="_blank" title="github" href="https://github.com/Annsklove">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                        </a>
-                    </address>
-                    <div class="contacts__info">
-                        <p>Анна Скурская</p>
-                        <div>
-                        </div>
-                    </div>
-                </div>
-    </footer>
+    <div class="content">
 
-    <script src="src/vendors/jquery/jquery-3.2.1.min.js"></script>
-    <script src="src/vendors/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+      <section id="about" class="about">
+
+        <section id="aboutMe" class="section pb-sm-0">
+          <div class="clearfix">
+            <div class="container-fluid col-lg-6 col-lg-offset-6">
+              <header>
+                <h2 class="section-title">Немного о себе</h2>
+              </header>
+              <div class="about-entry">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sed quod. Molestiae rerum, quasi quod
+                  mollitia voluptates qui commodi facilis ad porro voluptate deserunt eius aliquid, tenetur iste
+                  molestias officiis!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, sed quod. Molestiae rerum, quasi quod
+                  mollitia voluptates qui commodi facilis ad porro voluptate deserunt eius aliquid, tenetur iste
+                  molestias officiis!</p>
+                <img alt="" src="img/signature.png">
+              </div>
+            </div>
+            <div class="bg-left-fluid col-lg-6 bg-1"></div>
+          </div>
+        </section>
+
+        <section class="section pt-0 pb-0" id>
+          <div class="clearfix">
+            <div class="container-fluid col-lg-6 pb-base pt-base">
+              <header>
+                <h2 class="section-title">Образование</h2>
+              </header>
+              <div class="about-entry">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. A praesentium voluptatum accusantium et
+                  voluptatem corrupti qui, quisquam harum doloremque molestias illum rerum earum commodi tenetur quos
+                  amet omnis dignissimos. Aliquid labore at unde illum eius.</p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. A praesentium voluptatum accusantium et
+                  voluptatem corrupti qui, quisquam harum doloremque molestias illum rerum earum commodi tenetur quos
+                  amet omnis dignissimos. Aliquid labore at unde illum eius.</p>
+              </div>
+            </div>
+            <div class="container-fluid col-lg-6 bg-light pb-base pt-base">
+              <header>
+                <h2 class="section-title">Резюме</h2>
+              </header>
+              <div class="about-entry">
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. A praesentium voluptatum accusantium et
+                  voluptatem corrupti qui, quisquam harum doloremque molestias illum rerum earum commodi tenetur quos
+                  amet omnis dignissimos. Aliquid labore at unde illum eius.</p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. A praesentium voluptatum accusantium et
+                  voluptatem corrupti qui, quisquam harum doloremque molestias illum rerum earum commodi tenetur quos
+                  amet omnis dignissimos. Aliquid labore at unde illum eius.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section bg-middle">
+          <div class="container-fluid">
+            <header class="text-center">
+              <h2 class="section-title">Ключевые навыки</h2>
+            </header>
+            <div class="row-base">
+              <div class="col-base col-feature col-md-12 text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit provident necessitatibus repellat
+                  magni perspiciatis facilis quasi. Expedita autem asperiores porro voluptatem reprehenderit. Minima
+                  nemo eum magni. Deserunt voluptate tempora suscipit. Ipsum incidunt soluta nihil, excepturi commodi
+                  quo aut maiores maxime placeat vitae eius id ducimus veritatis</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section bg-light">
+          <div class="container-fluid">
+            <div class="row-base">
+              <div class="col-base col-feature col-md-6 col-lg-4">
+                <i class="icon icon-camera2"></i>
+                <h6>WEB</h6>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error placeat blanditiis repellat, nihil
+                  dolorem voluptatibus ipsa, at veniam dolore eius eveniet aperiam, dolorum est consectetur.</p>
+              </div>
+              <div class="col-base col-feature col-md-6 col-lg-4">
+                <i class="icon icon-pen-remove"></i>
+                <h6>CMS</h6>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error placeat blanditiis repellat, nihil
+                  dolorem voluptatibus ipsa, at veniam dolore eius eveniet aperiam, dolorum est consectetur.</p>
+              </div>
+              <div class="clearfix visible-md"></div>
+              <div class="col-base col-feature col-md-6 col-lg-4">
+                <i class="icon icon-laptop-phone"></i>
+                <h6>Design</h6>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error placeat blanditiis repellat, nihil
+                  dolorem voluptatibus ipsa, at veniam dolore eius eveniet aperiam, dolorum est consectetur.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="section" id="contactsMe">
+        <div class="container-fluid">
+          <form class="js-ajax-form" novalidate="novalidate">
+            <div class="col-sm-6 form-group">
+              <input type="text" name="name" placeholder="Имя">
+            </div>
+            <div class="col-sm-6 form-group">
+              <input type="email" name="email" required="" placeholder="Email *">
+            </div>
+            <div class="col-sm-12 form-group">
+              <textarea rows="3" name="message" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="text-right">
+              <button type="submit" class="btn btn-dark">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+
+      <footer id="footer" class="footer">
+        <div class="container-fluid">
+          <div class="row-base row">
+            <div class="brand-info col-base col-md-6 col-lg-4">
+              <a href="#top" class="brand js-target-scroll">
+                Анна Скурская
+              </a>
+              <p>We create web products for the help and growth of your business.</p>
+            </div>
+            <div class="col-contacts col-base col-md-6 col-lg-3 col-lg-offset-1">
+              <address><a href="tel:830022233344" class="phone">+8 300 222 333 44</a></address>
+              <address> <a href="mailto:info@Selena.com" class="email">info@Selena.com</a></address>
+            </div>
+            <div class="clearfix visible-md"></div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container-fluid">
+            <div class="copyrights">
+              © Анна Скурская, 2020
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="request" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close">&times;</span>
+            <h2 class="modal-title">Get start</h2>
+            <p class="modal-info">Leave your contacts and our managers<br> will contact you soon.</p>
+          </div>
+          <div class="modal-body">
+            <form class="form-request js-ajax-form">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" required placeholder="Email *">
+              </div>
+              <div class="form-group">
+                <textarea rows="3" name="message" placeholder="Message"></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-block">Get start</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals success -->
+    <div id="success" class="modal modal-message fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+            <h2 class="modal-title">Thank you</h2>
+            <p class="modal-subtitle">Your message is successfully sent...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals error -->
+    <div id="error" class="modal modal-message fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+            <h2 class="modal-title">Sorry</h2>
+            <p class="modal-subtitle"> Something went wrong </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+
+  <script src="src/vendors/jquery/jquery.min.js"></script>
+  <script src="src/vendors/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="src/vendors/animsition.min.js"></script>
+  <!-- <script src="src/vendors/smoothscroll.js"></script> -->
+
+  <!-- Проверка на валидность -->
+  <script src="src/vendors/jquery/jquery.validate.min.js"></script>
+
+  <script src="src/vendors/wow.min.js"></script>
+
+  <script src="src/vendors/jquery/jquery.ajaxchimp.min.js"></script>
+
+  <script src="src/js/jarallax.js"></script>
+
+  <script src="src/vendors/isotope.pkgd.min.js"></script>
+
+  <script src="src/js/imagesloaded.pkgd.js"></script>
+
+  <script src="src/js/interface.js"></script>
 </body>
 
 </html>

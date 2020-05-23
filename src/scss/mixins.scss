@@ -1,6 +1,0 @@
-@mixin mainFont ($size: $fontSizeMain, $lineHt: 24px, $color: $mainColorText, $fWeight: 500) {
-    font-size: $size;
-    line-height: $lineHt;
-    color: $color;
-    font-weight: $fWeight;
-}

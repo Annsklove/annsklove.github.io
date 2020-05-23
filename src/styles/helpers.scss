@@ -1,0 +1,52 @@
+.text-white {
+    color: $whiteColor;
+}
+
+.text-dark {
+    color: $darkColorText;
+}
+
+.text-muted {
+    color: $textColorMuted;
+}
+
+.text-gray {
+    color: $textColorGrey;
+}
+
+.bg-dark {
+    color: $textColorMuted;
+    background-color: $darkColorMore;
+}
+
+.bg-middle {
+    background-color: $bgMiddleColor;
+}
+
+.bg-light {
+    background-color: $bgLightColor;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.pb-sm {
+    padding-bottom: 4em !important;
+}
+
+.pt-sm {
+    padding-top: 4em !important;
+}
+
+.pb-base {
+    padding-bottom: 7.1em !important;
+}
+
+.pt-base {
+    padding-top: 7.1em !important;
+}

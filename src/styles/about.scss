@@ -1,0 +1,154 @@
+.main-about {
+    background: url(../img/bg/bg-about.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.main-about2 {
+    background: url(../img/bg/bg-about2.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.bg-1 {
+    background: url(../img/bg/bg-1.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.bg-2 {
+    background: url(../img/bg/bg-2.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.bg-3 {
+    background: url(../img/bg/bg-3.jpg) 0 0 no-repeat;
+    background-size: cover;
+}
+
+.skills-bar {
+    margin-top: 3em;
+}
+
+.progress {
+    overflow: visible;
+    height: 0.5em;
+    margin-bottom: 2.7em;
+    border-radius: 0;
+    box-shadow: none;
+    background: #f0f0f0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.progress-bar-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.7em;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #141414;
+    margin-bottom: 0.5em;
+}
+
+.progress-bar {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    background-color: #3b3b3b;
+    color: #343434;
+    width: 15%;
+
+    span {
+        position: absolute;
+        top: -30px;
+        right: 0px;
+    }
+}
+
+.col-feature {
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    .icon {
+        margin-top: -0.4em;
+    }
+
+    h6 {
+        margin-top: 0.4em;
+    }
+}
+
+
+.main-services {
+    background: url(../img/bg/bg-services.jpg) 50% no-repeat;
+    background-size: cover;
+}
+
+.section-main-clients {
+    padding-top: 4em !important;
+}
+
+.client {
+    position: relative;
+    float: left;
+    padding: 4.2em 3.75em 0 3em;
+
+    .quote {
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        top: -2rem;
+        left: -2rem;
+        font-size: 10em;
+        line-height: 1;
+        color: #eae9e9;
+        font-style: italic;
+    }
+}
+
+.client-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #3b3b3b;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 1.4em 0;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 3.75em;
+}
+
+.owl-dot {
+    display: inline-block;
+    height: 5px;
+    background-color: #e2e2e2;
+    width: 25px;
+    border-radius: 5px;
+    margin: 0 12px;
+}
+
+.owl-dot.active {
+    background-color: #b0b0b0;
+}
+
+.statistic {
+    position: relative;
+    padding: 5em 0;
+}
+
+
+.col-stat {
+    .icon {
+        margin-bottom: 0.5em;
+    }
+
+    span {
+        float: left;
+        margin: 0 1em 0 0;
+        margin-right: 0.3em;
+        display: block;
+    }
+}

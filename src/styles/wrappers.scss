@@ -1,0 +1,80 @@
+.container-fluid {
+    padding: 0 2em;
+}
+
+.row-base {
+    margin: -4em -2em 0 -2em;
+}
+
+.col-base {
+    padding: 0 2em;
+    margin-top: 4em;
+}
+
+header {
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section {
+    position: relative;
+    padding-top: 5.1em;
+    padding-bottom: 5.1em;
+}
+
+.section-sm {
+    position: relative;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.section-static {
+    position: static !important;
+}
+
+.section-content {
+    margin-top: 4.8em;
+}
+
+.section-title {
+    position: relative;
+    margin-top: 0;
+}
+
+.bg-left-fluid,
+.bg-left-md-fluid,
+.bg-left-lg-fluid {
+    margin-top: 5em;
+    height: 30em;
+    background-size: cover;
+    background-position: 50% 0;
+}
+
+.bg-right-fluid,
+.bg-right-md-fluid,
+.bg-right-lg-fluid {
+    margin-top: 5em;
+    height: 30em;
+    background-size: cover;
+    background-position: 50% 0;
+}
+
+.lead {
+    font-size: 1.275em;
+    line-height: 2;
+    margin: 1em 0 1.8em;
+}
+
+.section-lead {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.navbar-space {
+    padding-top: 4em;
+}
+
+.navbar-sm-space {
+    padding-top: 4.3em;
+}

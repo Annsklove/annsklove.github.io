@@ -1,0 +1,459 @@
+.navbar {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 1.3em 15px 1.1em;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-white {
+    background: $whiteColor;
+}
+
+.brand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.875em;
+    font-weight: 700;
+    line-height: 1;
+    color: $greyColor;
+}
+
+.brand:hover,
+.brand:focus {
+    color: $greyColor;
+    text-decoration: none;
+}
+
+.navbar .brand {
+    float: left;
+    margin-left: 15px;
+    color: $whiteColor;
+    margin-top: -0.2em;
+}
+
+.navbar .social-list {
+    text-align: center;
+}
+
+.social-list {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    li {
+        display: inline-block;
+        margin: 0 1.1em;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        a {
+            font-size: 1em;
+            color: $whiteColor;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/* Nav Desctop */
+
+.nav-desctop-list {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.73em;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 0;
+    font-weight: 500;
+
+    li {
+        position: relative;
+        text-align: left;
+        -webkit-perspective: 2000px;
+        perspective: 2000px;
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            top: 60%;
+            visibility: hidden;
+            min-width: 16em;
+            padding: 1em 0;
+            opacity: 0;
+            white-space: nowrap;
+            background: $navBListBgColor;
+            letter-spacing: 0.2em;
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+
+        &:hover>ul {
+            top: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        li {
+            position: relative;
+            padding: 0.8em 2.5em 1em;
+
+            a {
+                position: relative;
+                color: $navListlinkColor;
+                -webkit-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s;
+            }
+
+            ul {
+                left: 100%;
+            }
+
+            &:hover>ul {
+                top: -0.6em;
+            }
+        }
+    }
+
+    &>li {
+        display: inline-block;
+        margin-left: 3em;
+
+        &>a {
+            color: $whiteColor;
+            display: block;
+            margin-top: 0.2em;
+            margin-bottom: 1.8em;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        &>ul {
+            left: -2em;
+            margin-top: 0;
+        }
+
+        &:hover>ul {
+            top: 100%;
+        }
+    }
+
+    li>a:hover,
+    .active>a {
+        opacity: 0.6;
+    }
+}
+
+/* Nav Mobile */
+
+.nav-mobile {
+    clear: both;
+    font-size: 1em;
+}
+
+.navbar-collapse {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.collapse {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.navbar-toggle {
+    padding: 0;
+    margin-top: 0.3em;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: 0;
+
+    .icon-bar {
+        background-color: $whiteColor;
+        height: 2px;
+        width: 30px;
+    }
+
+    .icon-bar+.icon-bar {
+        margin-top: 5px;
+    }
+
+    &.collapsed .icon-bar {
+        background-color: $whiteColor;
+    }
+}
+
+.nav-mobile-list {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-top: 1.8em;
+    margin-bottom: 0;
+
+    li {
+        position: relative;
+        border-top: 1px solid rgba(0, 0, 0, 0.07);
+
+        a {
+            position: relative;
+            display: block;
+            padding: 1em 1em;
+            text-decoration: none;
+            color: $navMobileLink;
+        }
+
+        a:hover,
+        .active>a {
+            color: $navMobileLinkHover;
+        }
+
+        li a {
+            color: $navMobileLink;
+        }
+    }
+
+    &>.active>a,
+    &>.active>a:hover {
+        background-color: $greyColor;
+        color: $whiteColor;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+
+    ul {
+        display: none;
+        font-size: 0.9em;
+    }
+}
+
+/* Navbar Affix */
+
+.navbar {
+    &.white {
+        position: absolute;
+    }
+
+    &.affix {
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        top: 0;
+        background-color: $navBListBgColor;
+
+        .nav-desctop-list li a {
+            color: $navMobileLink;
+        }
+
+        .brand {
+            color: $greyColor;
+        }
+
+        .social-list {
+            li a {
+                color: $navMobileLink;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $greyColor;
+                }
+            }
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color: $greyColor;
+        }
+    }
+
+    &.light {
+        top: 0;
+        z-index: 5;
+        top: 0;
+        background-color: $navBListBgColor;
+
+        .nav-desctop-list li a {
+            color: $navMobileLink;
+        }
+
+        .brand {
+            color: $greyColor;
+        }
+
+        .social-list li a {
+            color: $navMobileLink;
+
+            &:hover {
+                text-decoration: none;
+                color: $greyColor;
+            }
+        }
+
+        .navbar-toggle .icon-bar {
+            background-color: $greyColor;
+        }
+    }
+}
+
+.nav-desctop-list>li:first-child {
+    margin-left: 0;
+}
+
+
+/* Navbar Left */
+
+.navbar-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 17em;
+    text-align: center;
+    background: $navLeftBgColor;
+    padding: 0;
+    margin: 0;
+
+    .brand-panel {
+        padding: 1.5em;
+
+        .myphoto {
+            background: url(../img/myphoto.jpg) center center no-repeat;
+            background-size: cover;
+            display: block;
+            width: 160px;
+            height: 160px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-bottom: 18px;
+        }
+    }
+
+    .social-list {
+        float: none;
+        position: absolute;
+        bottom: 4em;
+        width: 100%;
+        left: 0;
+
+        a {
+            color: $navSocialLink;
+        }
+    }
+
+    .address-panel {
+        left: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 10em;
+    }
+}
+
+
+.nav-left-list {
+    position: absolute;
+    padding: 0 2em;
+    top: 21em;
+    bottom: 25em;
+    right: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 0;
+
+    a {
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+    }
+
+    &>li {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 2em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &>a {
+            color: #323232;
+            margin-bottom: 0;
+        }
+    }
+
+    li a:hover,
+    .active>a,
+    .current>a {
+        opacity: 0.5;
+        text-decoration: none;
+    }
+
+    .current>a:after,
+    .current>a:after {
+        position: absolute;
+        font-family: 'Linearicons';
+        content: "\e93a";
+        padding-left: 0.9em;
+        font-size: 0.8em;
+        margin-top: 0.2em;
+    }
+
+    ul {
+        display: none;
+        font-size: 0.9em;
+        padding-top: 1.5em;
+
+        li {
+            margin-top: 2em;
+        }
+    }
+
+    address a {
+        color: $navAddressLink;
+
+        &:hover {
+            color: $greyColor;
+            text-decoration: none;
+        }
+    }
+}
+
+address {
+    line-height: normal;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,34 @@
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: $mainBtnColor;
+    letter-spacing: 0.28em;
+    font-size: 0.93em;
+    position: relative;
+    display: inline-block;
+    border: 0;
+    border-radius: 30px;
+    padding: 1.2em 2.6em 1.2em;
+    height: 3.8em;
+    font-size: 0.9375em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: $mainBtnColorBg;
+    -webkit-transition: all .3s ease-out !important;
+    transition: all .3s ease-out !important;
+
+    &:hover,
+    &:focus {
+        background-color: $mainBtnColorHover;
+        color: $mainBtnColor;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none !important;
+    }
+}
+
+.btn-dark {
+    background-color: $darkBtnColorBg;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

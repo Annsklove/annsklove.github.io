@@ -1,0 +1,165 @@
+h1,
+.h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 4.3em;
+    line-height: 1.2;
+    color: $h1Color;
+    margin: 0.6em 0;
+}
+
+h1 i,
+.h1 i {
+    display: inline-block;
+    font-size: 1.1em;
+    font-family: 'Playfair Display', serif;
+}
+
+h2,
+.h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    line-height: 1.2;
+    color: $h2Color;
+    margin: 0.6em 0;
+}
+
+h2 i,
+.h2 i {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+}
+
+h3,
+.h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.875em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $hMoreColor;
+}
+
+h3 i,
+.h3 i {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+}
+
+h4,
+.h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.65em;
+    line-height: 1.35;
+    font-weight: 700;
+    color: $hMoreColor;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 1.3em 0;
+}
+
+h4 i,
+.h4 i {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+}
+
+h5,
+.h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35em;
+    line-height: 1.35;
+    font-weight: 700;
+    color: $hMoreColor;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 1.4em 0;
+}
+
+h6,
+.h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15em;
+    line-height: 1.35;
+    font-weight: 700;
+    color: $hMoreColor;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 1.4em 0;
+}
+
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a {
+    color: inherit;
+}
+
+h1 a:hover,
+.h1 a:hover,
+h2 a:hover,
+.h2 a:hover,
+h3 a:hover,
+.h3 a:hover,
+h4 a:hover,
+.h4 a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    color: $aColor;
+    -webkit-transition: color .3s ease-out;
+    -o-transition: color .3s ease-out;
+    transition: color .3s ease-out;
+}
+
+a:hover,
+a:focus {
+    color: $aFocusColor;
+    outline: none;
+    text-decoration: underline;
+}
+
+
+a:focus {
+    text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: $cursorBgColor;
+}
+
+::selection {
+    background-color: $selectionBgColor;
+    color: $whiteColor;
+}
+
+-webkit-::selection {
+    background-color: $selectionBgColor;
+    color: $whiteColor;
+}
+
+::-moz-selection {
+    background-color: $selectionBgColor;
+    color: $whiteColor;
+}
