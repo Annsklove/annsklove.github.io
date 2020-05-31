@@ -7,36 +7,29 @@
     padding: 1.3em 15px 1.1em;
     border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.navbar-white {
-    background: $whiteColor;
+    .brand {
+        float: left;
+        margin-left: 15px;
+        color: $whiteColor;
+        margin-top: -0.2em;
+    }
+
+    .social-list {
+        text-align: center;
+    }
 }
 
 .brand {
+    @include mainFont (1.875em, 1, $greyColor, $fWeight: 700);
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 1.875em;
-    font-weight: 700;
-    line-height: 1;
-    color: $greyColor;
-}
 
-.brand:hover,
-.brand:focus {
-    color: $greyColor;
-    text-decoration: none;
-}
-
-.navbar .brand {
-    float: left;
-    margin-left: 15px;
-    color: $whiteColor;
-    margin-top: -0.2em;
-}
-
-.navbar .social-list {
-    text-align: center;
+    &:hover,
+    &:focus {
+        color: $greyColor;
+        text-decoration: none;
+    }
 }
 
 .social-list {
@@ -64,14 +57,13 @@
 
             &:hover {
                 text-decoration: none;
+                color: $linkHoverColor;
             }
         }
     }
 }
 
-
 /* Nav Desctop */
-
 .nav-desctop-list {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -103,9 +95,7 @@
             white-space: nowrap;
             background: $navBListBgColor;
             letter-spacing: 0.2em;
-            -webkit-transition: all .3s ease-out;
-            -moz-transition: all .3s ease-out;
-            transition: all .3s ease-out;
+            @include transition ();
         }
 
         &:hover>ul {
@@ -121,9 +111,7 @@
             a {
                 position: relative;
                 color: $navListlinkColor;
-                -webkit-transition: all 0.5s;
-                -o-transition: all 0.5s;
-                transition: all 0.5s;
+                @include transition ($transition: all 0.5s);
             }
 
             ul {
@@ -145,9 +133,7 @@
             display: block;
             margin-top: 0.2em;
             margin-bottom: 1.8em;
-            -webkit-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
+            @include transition ();
         }
 
         &>ul {
@@ -167,7 +153,6 @@
 }
 
 /* Nav Mobile */
-
 .nav-mobile {
     clear: both;
     font-size: 1em;
@@ -346,10 +331,7 @@
             display: block;
             width: 160px;
             height: 160px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            border-radius: 50%;
+            @include brdRadius ();
             margin: 0 auto;
             margin-bottom: 18px;
         }
@@ -395,9 +377,7 @@
     margin-bottom: 0;
 
     a {
-        -webkit-transition: all 0.3s ease-in;
-        -o-transition: all 0.3s ease-in;
-        transition: all 0.3s ease-in;
+        @include transition ();
     }
 
     &>li {
@@ -411,8 +391,9 @@
         }
 
         &>a {
-            color: #323232;
+            color: $navListlinkColor;
             margin-bottom: 0;
+            display: block;
         }
     }
 

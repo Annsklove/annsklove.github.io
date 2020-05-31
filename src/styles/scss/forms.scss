@@ -20,9 +20,7 @@ textarea {
     -webkit-box-shadow: none;
     box-shadow: none;
     -webkit-appearance: none;
-    -webkit-transition: all .15s;
-    -o-transition: all .15s;
-    transition: all .15s;
+    @include transition ();
 }
 
 textarea {
@@ -129,9 +127,7 @@ textarea.input-round {
     z-index: 4;
     top: 50%;
     cursor: pointer;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    @include transition ();
 }
 
 .arrow-left {

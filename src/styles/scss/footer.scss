@@ -1,0 +1,38 @@
+.footer {
+    padding-top: 4.5em;
+    background: $darkColor;
+    overflow: hidden;
+
+    &__main {
+        color: $lightColorText;
+        a {
+            color: $lightColorText;
+
+            &:hover {
+                color: darken($lightColorText, 20);
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__brand {
+        .brand {
+            display: inline-block;
+            font-size: 2em;
+            color: $whiteColor;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__bottom {
+        @include mainFont (0.75em, $lineHt: 2, $color: $lightColorText, $fWeight: 400);
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 4.5em;
+        padding: 1.7em 0;
+        background-color: $darkColorMore;
+    }
+}

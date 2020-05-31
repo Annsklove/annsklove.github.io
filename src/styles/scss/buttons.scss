@@ -1,9 +1,6 @@
 .btn {
+    @include mainFont (0.93em, 0.28em, $mainBtnColor, $fWeight: 700);
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: $mainBtnColor;
-    letter-spacing: 0.28em;
-    font-size: 0.93em;
     position: relative;
     display: inline-block;
     border: 0;

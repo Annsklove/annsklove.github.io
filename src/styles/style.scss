@@ -1,19 +1,23 @@
-@import "vars";
-@import "mixins";
+@import "scss/vars";
+@import "scss/mixins";
+@import "scss/media_mixin";
 
-@import "typography";
-@import "forms";
-@import "buttons";
-@import "loader";
-@import "wrappers";
-@import "helpers";
-@import "navbar";
+@import "scss/typography";
+@import "scss/helpers";
+@import "scss/buttons";
 
-@import "main";
-@import "about";
-@import "portfolio";
-@import "contacts";
-@import "footer";
-@import "modals";
+@import "scss/navbar";
+@import "scss/forms";
+@import "scss/footer";
 
-@import "media";
+@import "scss/loader";
+@import "scss/wrappers";
+
+@import "scss/main";
+@import "scss/about";
+@import "scss/portfolio";
+@import "scss/contacts";
+
+@import "scss/modals";
+
+@import "scss/media";
