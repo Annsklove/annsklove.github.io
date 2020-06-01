@@ -8,15 +8,34 @@
     border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+    @include _min1200 {
+        padding-left: 4.7em;
+        padding-right: 4.7em;
+    }
+
+    @include _min992 {
+        padding-bottom: 0;
+        padding-left: 2.2em;
+        padding-right: 2.2em;
+    }
+
     .brand {
         float: left;
         margin-left: 15px;
         color: $whiteColor;
         margin-top: -0.2em;
+
+        @include _min992 {
+            margin-left: 0;
+        }
     }
 
     .social-list {
         text-align: center;
+
+        @include _min992 {
+            float: right;
+        }
     }
 }
 
@@ -344,6 +363,10 @@
         width: 100%;
         left: 0;
 
+        @include _max768 {
+            bottom: 3em;
+        }
+
         a {
             color: $navSocialLink;
         }
@@ -354,9 +377,12 @@
         width: 100%;
         position: absolute;
         bottom: 10em;
+
+        @include _max768 {
+            display: none;
+        }
     }
 }
-
 
 .nav-left-list {
     position: absolute;
@@ -376,6 +402,10 @@
     letter-spacing: 0.08em;
     margin-bottom: 0;
 
+    @include _max768 {
+        bottom: 12em;
+    }
+
     a {
         @include transition ();
     }
@@ -384,7 +414,7 @@
         display: block;
         margin-left: 0;
         text-align: center;
-        margin-top: 2em;
+        margin-top: 1.6em;
 
         &:first-child {
             margin-top: 0;
@@ -437,4 +467,31 @@
 address {
     line-height: normal;
     margin-bottom: 1em;
+}
+
+/* Navbar helpers */
+
+.navbar-space {
+    padding-top: 4em;
+}
+
+.navbar-sm-space {
+    padding-top: 4.3em;
+
+    @include _min992 {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-responsive {
+        padding-bottom: 1em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-sm-space {
+        padding-top: 0;
+    }
+
 }

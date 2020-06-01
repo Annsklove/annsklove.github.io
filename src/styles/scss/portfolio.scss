@@ -288,3 +288,15 @@
     background: url(../img/bg/bg-project2.jpeg) 50% 0 no-repeat;
     background-size: cover;
 }
+
+.isotope {
+    .isotope-item {
+        @include _min768 {
+            width: 50%;
+        }
+
+        @include _min1200 {
+            width: 33.33333333%;
+        }
+    }
+}

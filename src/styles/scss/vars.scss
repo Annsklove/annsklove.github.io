@@ -1,3 +1,4 @@
+// Text
 $h1Color: #3b3b3b;
 $h2Color: #3b3b3b;
 $hMoreColor: #3b3b3b;
@@ -5,7 +6,6 @@ $aColor: #303030;
 $aFocusColor: #303030;
 $cursorBgColor: #a0a0a0;
 $selectionBgColor: #292929;
-
 $linkHoverColor: #e2675f;
 
 $darkColorText: #030203;
@@ -20,6 +20,9 @@ $bgLightColor: #f7f7f7;
 $lightColorText: #f2f2f2;
 $whiteColor: #fff;
 
+$fontMainSize: 1.1em;
+
+// Navbar
 $navBListBgColor: #f6f6f6;
 $navListlinkColor: #5a5a5a;
 $navMobileLink: #3b3b3b;
@@ -31,6 +34,7 @@ $navAddressLink: #595959;
 $filterLink: #8e8e8e;
 $filterTopLink: #3b3b3b;
 
+// Form
 $formBorderColor: #dadada;
 $formBorderFocus: #292929;
 $formTextColor: #3d3d3d;
@@ -38,9 +42,15 @@ $formPlaceholder: #a7a7a7;
 $formMoreTexttColor: #292929;
 $formMoreTexttError: #747474;
 
+$tagsBgr: #e6e6e6;
+
+// Buttons
 $mainBtnColor: #fff;
 $mainBtnColorBg: #292929;
-$mainBtnColorHover: #323232;
+$mainBtnColorHover: #e2675f;
 $darkBtnColorBg: #292929;
 
-$fontMainSize: 1.1em;
+// Icons
+$iconBgr: #e2675f;
+$iconBgrTwo: #505050;
+$iconBgrColor: #fff;

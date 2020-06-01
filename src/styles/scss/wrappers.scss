@@ -1,5 +1,13 @@
 .container-fluid {
     padding: 0 2em;
+
+    @include _min1200 {
+        padding: 0 4em;
+    }
+
+    @include _min992 {
+        padding: 0 3em;
+    }
 }
 
 .row-base {
@@ -19,8 +27,8 @@ header {
 
 .section {
     position: relative;
-    padding-top: 4.5em;
-    padding-bottom: 4.5em;
+    padding-top: 4.8em;
+    padding-bottom: 4.8em;
 }
 
 .section-static {
@@ -28,7 +36,19 @@ header {
 }
 
 .section-content {
-    margin-top: 4.8em;
+    margin-top: 4.2em;
+
+    @include _min1200 {
+        margin-top: 6.8em;
+    }
+
+    @include _min992 {
+        margin-top: 5.8em;
+    }
+
+    @include _min768 {
+        margin-top: 4.8em;
+    }
 }
 
 .section-title {
@@ -65,10 +85,64 @@ header {
     margin: 0;
 }
 
-.navbar-space {
-    padding-top: 4em;
+@media (min-width: 992px) {
+
+    .bg-right-md-fluid {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .bg-left-md-fluid {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+    }
 }
 
-.navbar-sm-space {
-    padding-top: 4.3em;
+@media (min-width: 1200px) {
+
+    .bg-left-fluid {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .bg-right-fluid {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .bg-right-sm-fluid {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .bg-right-lg-fluid {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .bg-left-lg-fluid {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        margin-top: 0;
+    }
 }
